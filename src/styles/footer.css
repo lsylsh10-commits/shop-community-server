@@ -1,0 +1,271 @@
+/* ========================================
+   FOOTER 기본 설정
+======================================== */
+
+.site-footer {
+  width: 100%;
+  margin-top: 90px;
+  background: #f5f5f5;
+  color: #183952;
+  font-size: 13px;
+}
+
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  box-sizing: border-box;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1168px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   푸터 상단
+======================================== */
+
+.footer-top {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 64px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #183952;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   SNS
+======================================== */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  height: auto;
+
+  border: none;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+
+  text-decoration: none;
+}
+
+.footer-social img {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* ========================================
+   푸터 본문
+======================================== */
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.5fr;
+  gap: 40px;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* ========================================
+   브랜드 로고 및 문구
+======================================== */
+
+.footer-brand {
+  width: 180px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.footer-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer-brand p {
+  width: 100%;
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ========================================
+   회사 정보
+======================================== */
+
+.footer-company,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-company p,
+.footer-contact p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ========================================
+   저작권
+======================================== */
+
+.footer-copyright {
+  width: 100%;
+  padding: 18px 16px;
+
+  border-top: 1px solid #ddd;
+
+  text-align: center;
+  font-size: 12px;
+  color: #8195a6;
+}
+
+/* ========================================
+   TABLET
+   768px ~ 1199px
+======================================== */
+
+@media (max-width: 1199px) {
+
+  .footer-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    width: 180px;
+  }
+
+  .footer-brand img {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   MOBILE
+   767px 이하
+======================================== */
+
+@media (max-width: 767px) {
+
+  .site-footer {
+    margin-top: 40px;
+  }
+
+  .footer-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* 푸터 상단 */
+
+  .footer-top-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .footer-links {
+    gap: 12px 20px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .footer-social {
+    gap: 16px;
+  }
+
+  .footer-social img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* 푸터 본문 */
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* 모바일 로고 */
+
+  .footer-brand {
+    grid-column: auto;
+    width: 160px;
+  }
+
+  .footer-brand img {
+    width: 100%;
+  }
+
+  .footer-brand p {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* 회사 정보 */
+
+  .footer-company,
+  .footer-contact {
+    gap: 5px;
+  }
+
+  /* 저작권 */
+
+  .footer-copyright {
+    font-size: 11px;
+  }
+}

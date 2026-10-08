@@ -1,0 +1,21 @@
+/* 일반 텍스트 클릭 시 깜빡이는 caret 제거 */
+body {
+  caret-color: transparent;
+}
+
+/* 실제 입력 영역에서는 caret 정상 표시 */
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: auto;
+}
+
+html,
+body,
+#root,
+button,
+input,
+select,
+textarea {
+  font-family: "Pretendard", sans-serif;
+}

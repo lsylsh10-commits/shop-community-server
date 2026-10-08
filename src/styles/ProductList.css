@@ -1,0 +1,1226 @@
+.product-list-page {
+  width: 100%;
+}
+
+.product-list-inner {
+  width: 100%;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 0 0 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.product-list-banner {
+  width: 100%;
+  aspect-ratio: 1168 / 389;
+  overflow: hidden;
+}
+
+.product-list-banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.product-list-category {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.product-list-category button {
+  width: 100%;
+  height: 48px;
+
+  border: 1px solid #183952;
+  border-radius: 999px;
+
+  background: #fff;
+  color: #183952;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.product-list-category button.active {
+  border-color: #183952;
+  background: #183952;
+  color: #fff;
+}
+
+
+/* =========================
+   CHARACTER
+========================= */
+
+.product-list-character-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-top: 24px;
+}
+
+.product-list-all-link {
+  padding: 0;
+  border: 0;
+
+  background: transparent;
+  color: #8195a6;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  cursor: pointer;
+}
+
+.product-list-all-link:hover {
+  text-decoration: underline;
+}
+
+.product-list-character-category {
+  display: grid;
+  grid-template-columns: repeat(7, 150px);
+  justify-content: space-between;
+
+  gap: 0;
+  width: 100%;
+
+  margin-top: 14px;
+}
+
+.product-list-character-category button {
+  width: 150px;
+  height: 48px;
+
+  padding: 10px 20px;
+
+  border: 1px solid #183952;
+  border-radius: 999px;
+
+  background: #fff;
+  color: #183952;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.product-list-character-category button.active {
+  border-color: #183952;
+  background: #183952;
+  color: #fff;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.product-list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 40px;
+}
+
+.product-list-count {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: #183952;
+}
+
+.product-list-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.product-list-search {
+  position: relative;
+
+  width: 220px;
+  height: 42px;
+}
+
+.product-list-search input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  padding: 0 42px 0 16px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  background: #fff;
+  color: #183952;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-list-search input::placeholder {
+  color: #8195a6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-list-search input:focus {
+  outline: none;
+  border-color: #183952;
+}
+
+.product-list-search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  transform: translateY(-50%);
+
+  color: #183952;
+  font-size: 20px;
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+.product-list-search-mobile {
+  display: none;
+}
+
+
+/* =========================
+   SORT / FILTER
+========================= */
+
+.product-list-sort,
+.product-list-filter {
+  width: 118px;
+  height: 42px;
+  box-sizing: border-box;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  background-color: #fff;
+  color: #183952;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.product-list-sort {
+  padding: 10px 40px 10px 20px;
+
+  background-image: url('/shop-community/images/shop/icons/sort-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px 16px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.product-list-filter {
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.product-list-filter-icon {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+  flex-shrink: 0;
+}
+
+.product-list-sort:focus,
+.product-list-sort:focus-visible,
+.product-list-filter:focus,
+.product-list-filter:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.product-list-filter.active {
+  border-color: #183952;
+}
+
+
+/* =========================
+   FILTER PANEL
+========================= */
+
+.product-filter-panel {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 16px;
+  padding: 20px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  background: #fff;
+}
+
+.product-filter-title {
+  margin: 0 0 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #183952;
+}
+
+.product-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-filter-options button {
+  padding: 8px 16px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 999px;
+
+  background: #fff;
+  color: #183952;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.product-filter-options button.active {
+  border-color: #183952;
+  background: #183952;
+  color: #fff;
+}
+
+
+/* =========================
+   PRODUCT GRID
+   MARKET HOME 기준 통일
+========================= */
+
+.product-list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  column-gap: 16px;
+  row-gap: 48px;
+
+  margin-top: 32px;
+}
+
+.product-list-card {
+  min-width: 0;
+  cursor: pointer;
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+   MARKET HOME 기준 통일
+========================= */
+
+.product-list-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 10 / 11;
+
+  overflow: hidden;
+}
+
+.product-list-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .product-list-card:hover .product-list-image img {
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================
+   PRODUCT INFO
+   MARKET HOME 기준 통일
+========================= */
+
+.product-list-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 8px;
+  padding: 14px 8px 0;
+}
+
+.product-list-info > div {
+  min-width: 0;
+}
+
+.product-list-name {
+  margin: 0 0 3px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  color: #0f3b59;
+
+  overflow-wrap: break-word;
+}
+
+.product-list-price {
+  display: block;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: #0f3b59;
+}
+
+
+/* =========================
+   HEART
+   MARKET HOME 기준 통일
+========================= */
+
+.product-list-heart {
+  flex-shrink: 0;
+
+  padding: 3px;
+  border: 0;
+
+  background: transparent;
+  color: #55758a;
+
+  font: inherit;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.product-list-heart.is-liked {
+  color: #e77688;
+}
+
+.product-list-heart:focus,
+.product-list-heart:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.product-list-empty {
+  width: 100%;
+
+  padding: 100px 20px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: #8195a6;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.product-list-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  margin-top: 56px;
+}
+
+.product-list-pagination button {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  background: #fff;
+  color: #183952;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.product-list-pagination button.active {
+  border-color: #183952;
+  background: #183952;
+  color: #fff;
+}
+
+
+/* =========================
+   TABLET
+   768px ~ 1199px
+========================= */
+
+@media (max-width: 1199px) {
+
+  .product-list-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .product-list-category {
+    gap: 12px;
+  }
+
+  .product-list-character-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 12px;
+  }
+
+  .product-list-character-category button {
+    width: calc((100% - 36px) / 4);
+    height: 48px;
+
+    padding: 0 16px;
+
+    font-size: 16px;
+  }
+
+  /* MARKET 태블릿 카드와 동일 */
+
+  .product-list-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px 18px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   767px 이하
+========================= */
+
+@media (max-width: 767px) {
+
+  .product-list-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* BANNER */
+
+  .product-list-banner {
+    width: 100%;
+    aspect-ratio: 335 / 250;
+  }
+
+  /* CATEGORY */
+
+  .product-list-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .product-list-category button {
+    width: 100%;
+    height: 34px;
+
+    padding: 0 6px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+  }
+
+  /* CHARACTER */
+
+  .product-list-character-top {
+    margin-top: 18px;
+  }
+
+  .product-list-all-link {
+    font-size: 13px;
+  }
+
+  .product-list-character-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .product-list-character-category button {
+    width: calc((100% - 24px) / 4);
+    height: 40px;
+
+    padding: 0 6px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+  }
+
+  /* TOOLBAR */
+
+  .product-list-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 28px;
+  }
+
+  .product-list-count {
+    flex-shrink: 0;
+
+    font-size: 16px;
+  }
+
+  .product-list-controls {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+  }
+
+  /* PC 검색창 모바일에서 숨김 */
+
+  .product-list-search-desktop {
+    display: none;
+  }
+
+  /* SORT */
+
+  .product-list-sort {
+    width: 92px;
+    height: 38px;
+
+    padding: 0 28px 0 8px;
+
+    font-size: 12px;
+
+    background-position: right 10px center;
+    background-size: 14px 14px;
+  }
+
+  /* FILTER */
+
+  .product-list-filter {
+    width: 82px;
+    height: 38px;
+
+    padding: 0 8px;
+
+    gap: 6px;
+
+    font-size: 12px;
+  }
+
+  .product-list-filter-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* FILTER PANEL */
+
+  .product-filter-panel {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-top: 12px;
+  }
+
+  /* 모바일 검색창은 필터 안에서만 표시 */
+
+  .product-list-search-mobile {
+    display: block;
+
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 20px;
+  }
+
+  .product-list-search-mobile input {
+    padding: 0 40px 0 14px;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .product-list-search-mobile input::placeholder {
+    font-size: 14px;
+  }
+
+  .product-list-search-mobile .product-list-search-icon {
+    right: 14px;
+    font-size: 18px;
+  }
+
+  .product-filter-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .product-filter-options button {
+    width: 100%;
+
+    padding: 8px 6px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  /* =========================
+     PRODUCT GRID
+     MARKET 모바일과 동일
+  ========================= */
+
+  .product-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px 12px;
+
+    margin-top: 18px;
+  }
+
+  .product-list-image {
+    aspect-ratio: 10 / 11;
+  }
+
+  .product-list-info {
+    gap: 8px;
+    padding: 14px 8px 0;
+  }
+
+  .product-list-name {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .product-list-price {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  /* EMPTY */
+
+  .product-list-empty {
+    padding: 70px 20px;
+
+    font-size: 14px;
+  }
+
+  /* PAGINATION */
+
+  .product-list-pagination {
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  .product-list-pagination button {
+    width: 32px;
+    height: 32px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* ========================================
+   HEADER INTEGRATED SEARCH
+   헤더 검색 결과에서만 사용하는 영역
+======================================== */
+
+.product-list-search-result-head {
+  margin-top: 40px;
+}
+
+.product-list-search-result-head h1 {
+  margin: 0;
+
+  color: #183952;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   COMMUNITY SEARCH RESULTS
+======================================== */
+
+.product-list-community-results {
+  width: 100%;
+
+  margin-top: 90px;
+}
+
+.product-list-community-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+.product-list-community-head h2 {
+  margin: 0 0 6px;
+
+  color: #183952;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.product-list-community-head p {
+  margin: 0;
+
+  color: #8195a6;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* 게시글 카드 */
+
+.product-list-community-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.product-list-community-card {
+  min-width: 0;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  cursor: pointer;
+}
+
+.product-list-community-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+}
+
+.product-list-community-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .product-list-community-card:hover
+  .product-list-community-image img {
+    transform: scale(1.04);
+  }
+}
+
+.product-list-community-content {
+  padding: 14px;
+}
+
+.product-list-community-content h3 {
+  margin: 0 0 7px;
+
+  color: #183952;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-list-community-text {
+  display: -webkit-box;
+
+  margin: 0 0 12px;
+
+  color: #55758a;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  overflow: hidden;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.product-list-community-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 12px;
+
+  color: #8195a6;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.product-list-community-bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #eeeeee;
+
+  color: #55758a;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+
+/* 게시글 검색 결과 없음 */
+
+.product-list-community-empty {
+  width: 100%;
+
+  padding: 50px 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  text-align: center;
+
+  color: #8195a6;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1199px) {
+
+  .product-list-community-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 24px 18px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+  .product-list-search-result-head {
+    margin-top: 28px;
+  }
+
+  .product-list-search-result-head h1 {
+    font-size: 20px;
+  }
+
+  .product-list-community-results {
+    margin-top: 50px;
+  }
+
+  .product-list-community-head {
+    margin-bottom: 16px;
+  }
+
+  .product-list-community-head h2 {
+    margin-bottom: 4px;
+
+    font-size: 22px;
+  }
+
+  .product-list-community-head p {
+    font-size: 12px;
+  }
+
+  .product-list-community-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px 12px;
+  }
+
+  .product-list-community-content {
+    padding: 12px;
+  }
+
+  .product-list-community-content h3 {
+    margin-bottom: 6px;
+
+    font-size: 13px;
+  }
+
+  .product-list-community-text {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    -webkit-line-clamp: 2;
+  }
+
+  .product-list-community-meta {
+    gap: 4px;
+
+    margin-bottom: 10px;
+
+    font-size: 10px;
+  }
+
+  .product-list-community-bottom {
+    gap: 8px;
+
+    padding-top: 8px;
+
+    font-size: 10px;
+  }
+
+  .product-list-community-empty {
+    padding: 40px 16px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   ProductList Category Final
+   일반 / 캐릭터 카테고리 디자인 통일
+========================================================= */
+
+/* 캐릭터 카테고리도 일반 카테고리 규격 사용 */
+
+.product-list-character-category {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: initial;
+
+  gap: 12px;
+  width: 100%;
+
+  margin-top: 40px;
+}
+
+.product-list-character-category button {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 12px;
+
+  border: 1px solid #183952;
+  border-radius: 999px;
+
+  background: #fff;
+  color: #183952;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.product-list-character-category button.active {
+  background: #183952;
+  color: #fff;
+}
+
+
+/* 전체 상품 복귀 버튼 */
+
+.product-list-character-category .product-list-back-button {
+  width: 100%;
+  background: #fff;
+  color: #183952;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1199px) {
+
+  .product-list-character-category {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .product-list-character-category button {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 10px;
+
+    font-size: 16px;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+  .product-list-character-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .product-list-character-category button {
+    width: 100%;
+    height: 34px;
+
+    padding: 0 6px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    white-space: nowrap;
+  }
+
+  .product-list-character-category .product-list-back-button {
+    font-size: 10px;
+  }
+}
+
+
+/* PC 캐릭터 카테고리 - 8개 한 줄 */
+
+@media (min-width: 1200px) {
+
+  .product-list-character-category {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+  }
+}
+
+
+/* 상품 검색창 마우스 커서 */
+
+.product-list-search input {
+  cursor: pointer;
+}

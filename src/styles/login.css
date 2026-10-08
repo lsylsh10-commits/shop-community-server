@@ -1,0 +1,708 @@
+/* src/styles/login.css */
+
+/* =========================
+   Login Page
+========================= */
+
+.login-page {
+  width: 100%;
+  min-height: 730px;
+  background: #fff;
+}
+
+.login-page__inner {
+  width: 100%;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 42px 24px 90px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Login Header
+========================= */
+
+.login-page__header {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.login-page__title {
+  margin: 0;
+  color: #0f3b59;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.login-page__subtitle {
+  margin: 10px 0 0;
+  color: #7d929e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   Login Form
+========================= */
+
+.login-form {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.login-form__field {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.login-form__label {
+  display: block;
+  margin-bottom: 9px;
+  color: #0f3b59;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.login-form__input {
+  display: block;
+  width: 100%;
+  height: 58px;
+  padding: 0 18px;
+  border: 1px solid #d8e0e5;
+  border-radius: 8px;
+  outline: none;
+  background: #f7f9fa;
+  color: #0f3b59;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.login-form__input::placeholder {
+  color: #a8b5bc;
+}
+
+.login-form__input:focus {
+  border-color: #0f3b59;
+  background: #fff;
+}
+
+/* =========================
+   Password
+========================= */
+
+.login-form__password {
+  position: relative;
+  width: 100%;
+}
+
+.login-form__input--password {
+  padding-right: 54px;
+}
+
+.login-form__password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+
+  display: flex;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.login-form__password-toggle img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* =========================
+   Login / Sign Up Buttons
+========================= */
+
+.login-form__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.login-form__button {
+  width: 100%;
+  height: 58px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form__button--login {
+  border: 1px solid #0f3b59;
+  background: #0f3b59;
+  color: #fff;
+}
+
+.login-form__button--signup {
+  border: 1px solid #0f3b59;
+  background: #fff;
+  color: #0f3b59;
+}
+
+/* =========================
+   Find Account
+========================= */
+
+.login-page__find {
+  display: flex;
+  margin: 28px auto 0;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.login-page__find-button {
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: #536b7a;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-page__find-divider {
+  color: #c9d1d6;
+  font-size: 14px;
+}
+
+/* =========================
+   OR Divider
+========================= */
+
+.login-page__divider {
+  display: flex;
+  width: 100%;
+  max-width: 520px;
+  margin: 32px auto;
+  align-items: center;
+  gap: 18px;
+}
+
+.login-page__divider-line {
+  height: 1px;
+  background: #dfe5e8;
+  flex: 1;
+}
+
+.login-page__divider-text {
+  color: #7d929e;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* =========================
+   Social Login
+========================= */
+
+.social-login {
+  display: flex;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-login__button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 54px;
+  padding: 0 20px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d8e0e5;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #263d4a;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.social-login__icon {
+  position: absolute;
+  left: 20px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* 카카오 아이콘 크기 + 위치 보정 */
+
+.social-login__button--kakao .social-login__icon {
+  left: 18px;
+  width: 26px;
+  height: 26px;
+}
+
+/* 구글 아이콘 위치 보정 */
+
+.social-login__button--google .social-login__icon {
+  left: 18px;
+}
+
+/* =========================
+   Tablet
+   768px ~ 1024px
+========================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-page {
+    min-height: auto;
+  }
+
+  .login-page__inner {
+    padding: 40px 32px 60px;
+  }
+
+  .login-form {
+    max-width: 520px;
+  }
+
+  .social-login {
+    max-width: 430px;
+  }
+}
+
+/* =========================
+   Mobile
+   ~ 767px
+========================= */
+
+@media (max-width: 767px) {
+  .login-page {
+    min-height: auto;
+  }
+
+  .login-page__inner {
+    padding: 30px 20px 48px;
+  }
+
+  /* Login Header */
+
+  .login-page__header {
+    margin-bottom: 28px;
+  }
+
+  .login-page__title {
+    font-size: 28px;
+  }
+
+  .login-page__subtitle {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  /* Login Form */
+
+  .login-form {
+    max-width: 100%;
+  }
+
+  .login-form__field {
+    margin-bottom: 18px;
+  }
+
+  .login-form__label {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .login-form__input {
+    height: 54px;
+    font-size: 13px;
+  }
+
+  /* Password */
+
+  .login-form__password-toggle {
+    right: 14px;
+  }
+
+  .login-form__password-toggle img {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* Login / Sign Up Buttons */
+
+  .login-form__buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .login-form__button {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  /* Find Account */
+
+  .login-page__find {
+    margin-top: 22px;
+    gap: 10px;
+  }
+
+  .login-page__find-button {
+    font-size: 14px;
+  }
+
+  /* OR Divider */
+
+  .login-page__divider {
+    max-width: 100%;
+    margin: 26px auto;
+    gap: 14px;
+  }
+
+  .login-page__divider-text {
+    font-size: 14px;
+  }
+
+  /* Social Login */
+
+  .social-login {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .social-login__button {
+    height: 52px;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Small Mobile
+   320px ~ 359px
+========================= */
+
+@media (max-width: 359px) {
+  .login-page__inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .login-page__title {
+    font-size: 26px;
+  }
+
+  .login-form__buttons {
+    gap: 8px;
+  }
+
+  .login-form__button {
+    font-size: 15px;
+  }
+
+  .login-page__find {
+    gap: 6px;
+  }
+
+  .login-page__find-button {
+    font-size: 13px;
+  }
+
+  .social-login__button {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .social-login__icon {
+    left: 16px;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* 카카오 아이콘 */
+
+  .social-login__button--kakao .social-login__icon {
+    left: 14px;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* 구글 아이콘 */
+
+  .social-login__button--google .social-login__icon {
+    left: 14px;
+  }
+}
+
+/* =========================
+   Social Login Modal
+========================= */
+
+.social-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(15, 59, 89, 0.28);
+}
+
+.social-modal__content {
+  position: relative;
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: 42px 36px 32px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
+  background: #fff;
+
+  box-shadow: 0 12px 40px rgba(15, 59, 89, 0.16);
+}
+
+.social-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  color: #536b7a;
+
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.social-modal__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-modal__logo {
+  display: block;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 20px;
+
+  object-fit: contain;
+}
+
+.social-modal__title {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.social-modal__description {
+  margin: 10px 0 28px;
+
+  color: #7d929e;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.social-modal__continue {
+  width: 100%;
+  height: 52px;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* 네이버 */
+
+.social-modal__continue--naver {
+  background: #03c75a;
+  color: #fff;
+}
+
+/* 카카오 */
+
+.social-modal__continue--kakao {
+  background: #fee500;
+  color: #191919;
+}
+
+/* 구글 */
+
+.social-modal__continue--google {
+  border: 1px solid #d8e0e5;
+  background: #fff;
+  color: #263d4a;
+}
+
+/* 취소 */
+
+.social-modal__cancel {
+  margin-top: 14px;
+  padding: 6px 12px;
+
+  border: 0;
+  background: transparent;
+
+  color: #7d929e;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Social Modal Mobile
+========================= */
+
+@media (max-width: 767px) {
+  .social-modal {
+    padding: 20px;
+  }
+
+  .social-modal__content {
+    max-width: 360px;
+    padding: 38px 24px 28px;
+    border-radius: 14px;
+  }
+
+  .social-modal__close {
+    top: 12px;
+    right: 14px;
+  }
+
+  .social-modal__logo {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 16px;
+  }
+
+  .social-modal__title {
+    font-size: 21px;
+  }
+
+  .social-modal__description {
+    margin: 8px 0 24px;
+    font-size: 14px;
+  }
+
+  .social-modal__continue {
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Social Modal Small Mobile
+========================= */
+
+@media (max-width: 359px) {
+  .social-modal {
+    padding: 16px;
+  }
+
+  .social-modal__content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/* ========================================
+   LOGIN PAGE 최종 여백 조정
+======================================== */
+
+/* PC */
+@media (min-width: 1025px) {
+  .login-page {
+    min-height: auto;
+  }
+
+  .login-page__inner {
+    padding-top: 72px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-page__inner {
+    padding-top: 60px;
+    padding-bottom: 32px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .login-page__inner {
+    padding-top: 44px;
+    padding-bottom: 28px;
+  }
+}

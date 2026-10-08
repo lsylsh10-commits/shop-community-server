@@ -1,0 +1,572 @@
+/* ========================================
+   HEADER 기본 설정
+======================================== */
+
+.site-header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 100;
+}
+
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+  box-sizing: border-box;
+}
+
+.header-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1168px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+/* ========================================
+   로고
+======================================== */
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  display: block;
+  width: 135px;
+  height: auto;
+}
+
+
+/* ========================================
+   PC 메뉴
+======================================== */
+
+.header-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav a {
+  color: #183952;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+
+/* ========================================
+   오른쪽 아이콘
+======================================== */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.header-actions a,
+.header-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  color: #183952;
+  cursor: pointer;
+}
+
+.header-actions svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* PC에서는 햄버거 숨김 */
+
+.header-menu-button {
+  display: none !important;
+}
+
+
+/* ========================================
+   검색창 기본 설정
+======================================== */
+
+.header-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+
+  width: 22px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  transition: width 0.35s ease;
+}
+
+.header-search.open {
+  width: 180px;
+}
+
+.header-search form {
+  flex: 0 1 0px;
+  width: 0;
+  min-width: 0;
+
+  overflow: hidden;
+
+  transition:
+    flex-basis 0.35s ease,
+    width 0.35s ease;
+}
+
+.header-search.open form {
+  flex: 1 1 0%;
+  width: auto;
+  min-width: 0;
+}
+
+.header-search input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+
+  padding: 0 10px;
+
+  border: 1px solid #183952;
+  border-radius: 4px;
+  outline: none;
+
+  font-size: 13px;
+  color: #183952;
+  background: #fff;
+}
+
+.header-search input:focus {
+  border-color: #55758a;
+}
+
+.header-search-button {
+  flex: 0 0 22px;
+}
+
+
+/* ========================================
+   TABLET
+   768px ~ 1199px
+======================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .header-inner {
+    padding: 0 24px;
+    gap: 12px;
+  }
+
+  .header-logo img {
+    width: 105px;
+  }
+
+  .header-nav {
+    position: static;
+    left: auto;
+    transform: none;
+
+    flex: 1;
+    min-width: 0;
+
+    justify-content: center;
+    gap: clamp(10px, 2vw, 24px);
+  }
+
+  .header-nav a {
+    font-size: clamp(12px, 1.3vw, 14px);
+  }
+
+  .header-actions {
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .header-search {
+    width: 22px;
+  }
+
+  .header-search.open {
+    width: clamp(105px, 13vw, 145px);
+  }
+
+  .header-search input {
+    height: 34px;
+    padding: 0 7px;
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
+   PC / TABLET
+   모바일 전용 메뉴 숨김
+======================================== */
+
+@media (min-width: 768px) {
+
+  .mobile-submenu,
+  .mobile-menu-bottom {
+    display: none;
+  }
+
+  .mobile-menu-section {
+    display: contents;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   767px 이하
+======================================== */
+
+@media (max-width: 767px) {
+
+  /* ========================================
+     모바일 헤더
+  ======================================== */
+
+  .site-header {
+    width: 100%;
+    height: 64px;
+
+    position: sticky;
+    top: 0;
+
+    background: #fff;
+    z-index: 1000;
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: none;
+
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+
+  /* ========================================
+     로고
+  ======================================== */
+
+  .header-logo img {
+    width: 105px;
+  }
+
+
+  /* ========================================
+     오른쪽 아이콘
+  ======================================== */
+
+  .header-actions {
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .header-actions a,
+  .header-actions button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-actions svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  /* 관심상품 / 장바구니 / 로그인 숨김 */
+
+  .header-actions > a {
+    display: none;
+  }
+
+
+  /* 햄버거 메뉴 표시 */
+
+  .header-menu-button {
+    display: flex !important;
+  }
+
+
+  /* ========================================
+     모바일 검색창
+  ======================================== */
+
+  .header-search {
+    width: 20px;
+    height: 36px;
+    gap: 6px;
+  }
+
+  .header-search.open {
+    width: clamp(
+      90px,
+      calc(100vw - 210px),
+      150px
+    );
+  }
+
+  .header-search-button {
+    flex: 0 0 20px;
+  }
+
+  .header-search input {
+    width: 100%;
+    min-width: 0;
+    height: 34px;
+
+    padding: 0 6px;
+
+    font-size: 12px;
+  }
+
+
+  /* ========================================
+     모바일 햄버거 메뉴
+  ======================================== */
+
+  .header-nav {
+    display: none;
+
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+
+    transform: none;
+
+    width: 100%;
+    max-width: none;
+
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    padding: 24px 20px 32px;
+
+    background: #fff;
+    border: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    z-index: 1001;
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+
+  /* ========================================
+     각 메뉴 영역
+  ======================================== */
+
+  .mobile-menu-section {
+    width: 100%;
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-home-section {
+    padding-top: 0;
+  }
+
+
+  /* HOME / MARKET / COMMUNITY / MY */
+
+  .mobile-menu-section > a {
+    display: block;
+    width: 100%;
+
+    color: #183952;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mobile-menu-section > a:hover,
+  .mobile-menu-section > a.active {
+    text-decoration: none;
+  }
+
+
+  /* ========================================
+     하위 메뉴
+  ======================================== */
+
+  .mobile-submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin-top: 16px;
+    padding-left: 12px;
+  }
+
+  .mobile-submenu a {
+    color: #55758a;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+
+  /* ========================================
+     로그아웃
+  ======================================== */
+
+  .mobile-menu-bottom {
+    width: 100%;
+    padding-top: 24px;
+  }
+
+  .mobile-menu-bottom a {
+    color: #183952;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-page-dim {
+    position: fixed;
+    inset: 64px 0 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+
+  .header-nav.open {
+    z-index: 1001;
+  }
+}
+
+/* 장바구니 숫자 뱃지 */
+.header-cart {
+  position: relative;
+}
+
+.header-cart-badge {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #183952;
+  color: #ffffff;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 로그인 후 헤더 프로필 */
+.header-profile {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header-profile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 모바일 메뉴 로그아웃 버튼 - 기존 텍스트 링크와 동일하게 */
+.mobile-menu-bottom button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* 모바일 로그아웃 = 1차 메뉴와 동일한 스타일 */
+.mobile-menu-bottom button {
+  padding: 0;
+  border: 0;
+  background: none;
+
+  color: #183952;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .header-nav,
+  .header-nav a,
+  .header-nav button {
+    font-family: "Pretendard", sans-serif;
+  }
+}

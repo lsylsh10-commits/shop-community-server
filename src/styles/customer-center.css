@@ -1,0 +1,647 @@
+/* =========================
+   BASE
+========================= */
+
+.customer-center,
+.customer-center * {
+  box-sizing: border-box;
+}
+
+.customer-center {
+  width: 100%;
+  background: #ffffff;
+  color: #0f3b59;
+}
+
+.customer-center__inner {
+  width: min(1168px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.customer-center__hero {
+  width: 100%;
+  padding: 0 0 70px;
+}
+
+.customer-center__hero-inner {
+  width: min(1168px, calc(100% - 80px));
+
+  height: 350px;
+  min-height: 350px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 48px;
+
+  background-image:
+    url('/shop-community/images/customer/customer-center-hero.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.customer-center__hero-text {
+  max-width: 440px;
+}
+
+.customer-center__hero-text h1 {
+  margin: 0 0 14px;
+
+  color: #0f3b59;
+
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.customer-center__hero-text p {
+  margin: 0;
+
+  color: #4f6470;
+
+  font-size: 16px;
+  line-height: 1.65;
+
+  word-break: keep-all;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.customer-section-heading {
+  margin-bottom: 28px;
+}
+
+.customer-section-heading h2 {
+  margin: 0 0 10px;
+
+  color: #0f3b59;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.customer-section-heading p {
+  margin: 0;
+
+  color: #6f7f88;
+
+  font-size: 15px;
+  line-height: 1.65;
+
+  word-break: keep-all;
+}
+
+.customer-section-heading--row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.customer-section-heading--row h2 {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   SUPPORT
+========================= */
+
+.customer-support {
+  padding: 0 0 70px;
+}
+
+.customer-support__content {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+
+  border-top: 1px solid #d9dee2;
+}
+
+.customer-support__hours,
+.customer-support__channels {
+  padding-top: 28px;
+}
+
+.customer-support__hours {
+  padding-right: 46px;
+
+  border-right: 1px solid #e2e6e8;
+}
+
+.customer-support__channels {
+  padding-left: 46px;
+}
+
+.customer-support__subtitle {
+  margin-bottom: 25px;
+}
+
+.customer-support__hours .customer-support__subtitle {
+  margin-bottom: 42px;
+}
+
+.customer-support__channels .customer-support__subtitle {
+  margin-bottom: 25px;
+}
+
+.customer-support__subtitle h3 {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+/* 운영시간 하위 항목 */
+
+.customer-support__hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding-left: 18px;
+}
+
+.customer-support__hours-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+}
+
+.customer-support__hours-row strong {
+  color: #3d515d;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.customer-support__hours-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.customer-support__hours-row b {
+  color: #0f3b59;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.customer-support__hours-row span {
+  color: #839099;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* 업무시간 외 안내 */
+
+.customer-support__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  margin: 30px 0 0;
+  padding-left: 18px;
+}
+
+.customer-support__notice-icon {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2px;
+
+  border: 1px solid #b5bdc2;
+  border-radius: 50%;
+
+  color: #8a969d;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.customer-support__notice p {
+  margin: 0;
+
+  color: #7d8a92;
+
+  font-size: 13px;
+  line-height: 1.65;
+
+  word-break: keep-all;
+}
+
+
+/* =========================
+   CHANNEL
+========================= */
+
+.customer-channel {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  align-items: center;
+  gap: 26px;
+
+  min-height: 82px;
+
+  border-bottom: 1px solid #e2e6e8;
+}
+
+.customer-channel:last-child {
+  border-bottom: 0;
+}
+
+.customer-channel__info div,
+.customer-channel__value {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.customer-channel__info strong,
+.customer-channel__value strong {
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.customer-channel__info span,
+.customer-channel__value span {
+  color: #87939a;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.customer-channel__button {
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   INQUIRY GUIDE
+========================= */
+
+.customer-inquiry-guide {
+  width: min(1168px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 72px 42px 84px;
+
+  background: #faf8f5;
+}
+
+.customer-inquiry-guide .customer-center__inner {
+  width: 100%;
+  margin: 0;
+}
+
+.customer-inquiry-guide .customer-section-heading {
+  margin-bottom: 32px;
+}
+
+.customer-inquiry-guide__list {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e0e3e5;
+}
+
+.customer-inquiry-guide__item {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  align-items: center;
+  gap: 22px;
+
+  min-height: 64px;
+
+  padding: 0 32px;
+
+  border-bottom: 1px solid #e3e6e8;
+}
+
+.customer-inquiry-guide__item strong {
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.customer-inquiry-guide__item p {
+  margin: 0;
+
+  color: #77868e;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.customer-process {
+  padding: 76px 0 50px;
+}
+
+.customer-process__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 52px;
+}
+
+.customer-process__wrap {
+  position: relative;
+}
+
+.customer-process__item {
+  min-height: 165px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.customer-process__number {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border: 1px solid #d8c4aa;
+  border-radius: 50%;
+
+  background: #fbf5ed;
+
+  color: #3e251e;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.customer-process__item strong {
+  margin-bottom: 10px;
+
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.customer-process__item p {
+  margin: 0;
+
+  color: #7a8991;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.customer-process__arrow {
+  position: absolute;
+
+  top: 20px;
+  right: -8px;
+
+  color: #a5afb4;
+
+  font-size: 22px;
+  font-weight: 300;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .customer-center__inner {
+    width: calc(100% - 56px);
+  }
+
+  .customer-center__hero-inner {
+    width: calc(100% - 56px);
+
+    height: 320px;
+    min-height: 320px;
+
+    padding: 0 40px;
+  }
+
+  .customer-support__content {
+    grid-template-columns: 1fr 1.25fr;
+  }
+
+  .customer-support__hours {
+    padding-right: 32px;
+  }
+
+  .customer-support__channels {
+    padding-left: 32px;
+  }
+
+  .customer-channel {
+    grid-template-columns: 1fr 180px;
+  }
+
+  .customer-inquiry-guide {
+    width: calc(100% - 56px);
+
+    padding: 60px 30px 70px;
+  }
+
+  .customer-inquiry-guide__item {
+    grid-template-columns: 150px 1fr;
+
+    padding: 0 26px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  .customer-center__inner {
+    width: calc(100% - 40px);
+  }
+
+
+  /* HERO */
+
+  .customer-center__hero {
+    padding-bottom: 60px;
+  }
+
+  .customer-center__hero-inner {
+    width: calc(100% - 40px);
+
+    height: 360px;
+    min-height: 360px;
+
+    align-items: flex-start;
+
+    padding: 55px 22px 34px;
+
+    background-image:
+      url('/shop-community/images/customer/customer-center-hero.png');
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .customer-center__hero-text {
+    max-width: 300px;
+  }
+
+  .customer-center__hero-text h1 {
+    margin: 0 0 14px;
+
+    font-size: 34px;
+  }
+
+  .customer-center__hero-text p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+
+  /* SUPPORT */
+
+  .customer-support {
+    padding-bottom: 60px;
+  }
+
+  .customer-support__content {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-support__hours {
+    padding: 24px 0 38px;
+
+    border-right: 0;
+    border-bottom: 1px solid #e2e6e8;
+  }
+
+  .customer-support__channels {
+    padding: 34px 0 0;
+  }
+
+  .customer-support__hours .customer-support__subtitle,
+  .customer-support__channels .customer-support__subtitle {
+    margin-bottom: 25px;
+  }
+
+  .customer-support__hours-list {
+    padding-left: 12px;
+  }
+
+  .customer-support__hours-row {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .customer-support__notice {
+    padding-left: 12px;
+  }
+
+  .customer-channel {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 18px 0;
+  }
+
+
+  /* INQUIRY GUIDE */
+
+  .customer-inquiry-guide {
+    width: calc(100% - 40px);
+
+    padding: 58px 20px 66px;
+  }
+
+  .customer-inquiry-guide__item {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+
+    min-height: auto;
+
+    padding: 18px 20px;
+  }
+
+
+  /* PROCESS */
+
+  .customer-process {
+    padding: 60px 0 40px;
+  }
+
+  .customer-process__list {
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 34px;
+
+    margin-top: 42px;
+  }
+
+  .customer-process__arrow {
+    display: none;
+  }
+}

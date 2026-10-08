@@ -1,0 +1,2777 @@
+/* =========================================================
+   MyPage - Base
+========================================================= */
+
+.mypage {
+  width: 100%;
+  padding: 24px 20px 0;
+  box-sizing: border-box;
+  color: #0f3b59;
+}
+
+.mypage *,
+.mypage *::before,
+.mypage *::after {
+  box-sizing: border-box;
+}
+
+.mypage button,
+.mypage input,
+.mypage textarea {
+  font-family: inherit;
+}
+
+.mypage button {
+  font: inherit;
+}
+
+
+/* =========================================================
+   MyPage Layout
+========================================================= */
+
+.mypage__inner {
+  width: 100%;
+  max-width: 1168px;
+  min-height: 1080px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+
+  border: 1px solid #e6e9eb;
+  border-radius: 6px;
+
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.mypage__content {
+  min-width: 0;
+  padding: 20px;
+}
+
+
+/* =========================================================
+   Sidebar
+========================================================= */
+
+.mypage-sidebar {
+  width: 100%;
+  padding: 20px;
+
+  border-right: 1px solid #e6e9eb;
+  background: #ffffff;
+}
+
+.mypage-sidebar__nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mypage-sidebar__item {
+  width: 100%;
+  min-height: 56px;
+
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: 0;
+  border-bottom: 1px solid #e8ecef;
+
+  background: transparent;
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.mypage-sidebar__item:hover {
+  background: #f6f8f9;
+}
+
+.mypage-sidebar__item.is-active {
+  background: #e9eef1;
+  border-radius: 4px;
+}
+
+.mypage-sidebar__icon {
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 20px;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   MyPage Tabs
+========================================================= */
+
+.mypage-tabs {
+  display: none;
+}
+
+
+/* =========================================================
+   Profile
+========================================================= */
+
+.profile-section {
+  width: 100%;
+  min-height: 245px;
+
+  padding: 28px 42px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 26px;
+
+  border: 1px solid #e6e9eb;
+  border-radius: 7px;
+
+  background: #ffffff;
+}
+
+.profile-section__image-wrap {
+  width: 120px;
+  height: 120px;
+
+  flex: 0 0 120px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+  background: #f3f3f3;
+}
+
+.profile-section__image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+}
+
+.profile-section__info {
+  min-width: 0;
+  flex: 1;
+}
+
+.profile-section__info h1 {
+  margin: 0 0 3px;
+
+  color: #0f3b59;
+
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.profile-section__username {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #7d929e;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.profile-section__description {
+  max-width: 560px;
+
+  margin: 0 0 18px;
+
+  color: #7d929e;
+
+  font-size: 13px;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+.profile-section__stats {
+  display: flex;
+  align-items: center;
+}
+
+.profile-section__stats > div {
+  min-width: 78px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-section__stats > div + div {
+  padding-left: 24px;
+
+  border-left: 1px solid #e6e9eb;
+}
+
+.profile-section__stats strong {
+  color: #0f3b59;
+
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.profile-section__stats span {
+  margin-top: 2px;
+
+  color: #7d929e;
+
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.profile-section__edit {
+  width: 158px;
+  height: 42px;
+
+  position: absolute;
+  right: 38px;
+  bottom: 20px;
+
+  border: 1px solid #e4e8ea;
+  border-radius: 4px;
+
+  background: #ffffff;
+  color: #0f3b59;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.profile-section__edit:hover {
+  background: #f6f8f9;
+}
+
+
+/* =========================================================
+   Quick Menu
+========================================================= */
+
+.quick-menu {
+  width: 100%;
+  margin-top: 24px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.quick-menu__card {
+  width: 100%;
+  min-width: 0;
+  height: 80px;
+
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  border: 1px solid #e6e9eb;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #0f3b59;
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.quick-menu__card:hover {
+  background: #f8fafb;
+}
+
+.quick-menu__icon {
+  width: 24px;
+  height: 24px;
+
+  flex: 0 0 24px;
+
+  display: block;
+  object-fit: contain;
+}
+
+.quick-menu__text {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-menu__text strong {
+  margin: 0 0 2px;
+
+  color: #0f3b59;
+
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.quick-menu__text small {
+  color: #7d929e;
+
+  font-size: 10px;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.quick-menu__arrow {
+  width: 16px;
+  height: 16px;
+
+  flex: 0 0 16px;
+
+  margin-left: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   Common Section
+========================================================= */
+
+.mypage-section {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.mypage-section__header {
+  width: 100%;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mypage-section__header h2 {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Friends / Product 전체보기
+========================================================= */
+
+.mypage .mypage-section__header .mypage-section__more {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+  color: #7d929e;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.mypage .mypage-section__header .mypage-section__more:hover {
+  background: transparent;
+  color: #0f3b59;
+}
+
+.mypage-section__more-icon {
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   Friends
+========================================================= */
+
+.friends-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.friend-item {
+  min-width: 0;
+  text-align: center;
+}
+
+.friend-item img {
+  width: 78px;
+  height: 78px;
+  max-width: 100%;
+
+  margin: 0 auto 7px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #f2f2f2;
+  object-fit: cover;
+}
+
+.friend-item strong {
+  display: block;
+
+  color: #0f3b59;
+
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   Recent Products
+========================================================= */
+
+.mypage-products,
+.mypage-tab-products {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mypage-product-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(15, 59, 89, 0.12);
+
+  background: #ffffff;
+}
+
+.mypage-product-card__image {
+  width: 100%;
+
+  aspect-ratio: 1 / 0.76;
+
+  overflow: hidden;
+
+  background: #f4f4f4;
+}
+
+.mypage-product-card__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+}
+
+.mypage-product-card__info {
+  padding: 6px 6px 7px;
+}
+
+/* 상품명 12px */
+.mypage-product-card__info h3 {
+  min-height: 0;
+
+  margin: 0 0 5px;
+
+  overflow: hidden;
+
+  color: #0f3b59;
+
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 가격 12px */
+.mypage-product-card__info strong {
+  display: block;
+
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Posts Layout
+========================================================= */
+
+.mypage-posts {
+  width: 100%;
+
+  position: relative;
+
+  margin-top: 26px;
+  padding-bottom: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
+
+  border-bottom: 0;
+}
+
+.mypage-posts::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 1px;
+
+  background: rgba(15, 59, 89, 0.12);
+
+  transform: translateX(-0.5px);
+
+  pointer-events: none;
+}
+
+.mypage-post-group {
+  min-width: 0;
+}
+
+.mypage-post-group__header {
+  width: 100%;
+
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mypage-post-group__header h2 {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Posts 더보기
+========================================================= */
+
+.mypage .mypage-post-group__header .mypage-post-group__more {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+  color: #7d929e;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.mypage .mypage-post-group__header .mypage-post-group__more:hover {
+  background: transparent;
+  color: #0f3b59;
+}
+
+.mypage-post-group__more-icon {
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   Post Card
+========================================================= */
+
+.mypage-post {
+  width: 100%;
+  min-height: 92px;
+
+  padding: 10px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-bottom: 1px solid rgba(15, 59, 89, 0.12);
+}
+
+.mypage-post:last-child {
+  border-bottom: 0;
+}
+
+.mypage-post img {
+  width: 92px;
+  height: 64px;
+
+  flex: 0 0 92px;
+
+  display: block;
+  object-fit: cover;
+
+  background: #f3f3f3;
+}
+
+.mypage-post__content {
+  min-width: 0;
+  flex: 1;
+}
+
+/* 게시물 제목 13px */
+.mypage-post__content h3 {
+  margin: 0 0 7px;
+
+  overflow: hidden;
+
+  color: #0f3b59;
+
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 게시물 날짜 12px */
+.mypage-post__content time {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7d929e;
+
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* 좋아요 / 댓글 12px */
+.mypage-post__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #0f3b59;
+
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   Individual Tab Content
+========================================================= */
+
+.mypage-tab-content {
+  width: 100%;
+  min-height: 500px;
+}
+
+.mypage-tab-content > h1 {
+  margin: 0 0 24px;
+
+  color: #0f3b59;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.mypage-full-post-list {
+  border-top: 1px solid #e6e9eb;
+}
+
+
+/* =========================================================
+   Cart
+========================================================= */
+
+.cart-list {
+  width: 100%;
+
+  border-top: 1px solid #e6e9eb;
+}
+
+.cart-item {
+  width: 100%;
+
+  padding: 18px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border-bottom: 1px solid #e6e9eb;
+}
+
+.cart-item img {
+  width: 110px;
+  height: 110px;
+
+  flex: 0 0 110px;
+
+  display: block;
+  object-fit: cover;
+}
+
+.cart-item h3 {
+  margin: 0 0 8px;
+
+  color: #0f3b59;
+
+  font-size: 15px;
+}
+
+.cart-item p {
+  margin: 0 0 8px;
+
+  color: #7d929e;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   Friends Tab
+========================================================= */
+
+.friends-tab-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.friends-tab-card {
+  min-width: 0;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border: 1px solid #e6e9eb;
+  border-radius: 7px;
+
+  background: #ffffff;
+}
+
+.friends-tab-card img {
+  width: 72px;
+  height: 72px;
+
+  flex: 0 0 72px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  background: #f3f3f3;
+}
+
+.friends-tab-card h3 {
+  margin: 0 0 5px;
+
+  color: #0f3b59;
+
+  font-size: 14px;
+}
+
+.friends-tab-card p {
+  margin: 0;
+
+  color: #7d929e;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   Account Settings
+========================================================= */
+
+.account-settings {
+  width: 100%;
+}
+
+.account-settings__form {
+  width: 100%;
+  max-width: 680px;
+
+  padding: 28px;
+
+  border: 1px solid #e6e9eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+.account-settings__field {
+  margin-bottom: 22px;
+}
+
+.account-settings__field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0f3b59;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.account-settings__field input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d8e0e4;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #0f3b59;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.account-settings__field input::placeholder {
+  color: #a4b1b8;
+}
+
+.account-settings__field input:focus {
+  border-color: #7d929e;
+
+  box-shadow: 0 0 0 3px rgba(125, 146, 158, 0.12);
+}
+
+.account-settings__actions {
+  min-height: 48px;
+
+  margin-top: 28px;
+  padding-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  border-top: 1px solid #edf0f2;
+}
+
+.account-settings__message {
+  margin-right: auto;
+
+  color: #7d929e;
+
+  font-size: 12px;
+}
+
+.account-settings__actions button {
+  min-width: 120px;
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: 1px solid #0f3b59;
+  border-radius: 7px;
+
+  background: #0f3b59;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.account-settings__actions button:hover {
+  background: #163f59;
+}
+
+
+/* =========================================================
+   Notification Settings
+========================================================= */
+
+.notification-settings {
+  width: 100%;
+}
+
+.notification-settings__card {
+  width: 100%;
+  max-width: 680px;
+
+  padding: 0 28px;
+
+  border: 1px solid #e6e9eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+.notification-settings__item {
+  min-height: 94px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+.notification-settings__item:last-child {
+  border-bottom: 0;
+}
+
+.notification-settings__text {
+  min-width: 0;
+}
+
+.notification-settings__text strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #0f3b59;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.notification-settings__text p {
+  margin: 0;
+
+  color: #7d929e;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.notification-toggle {
+  position: relative;
+
+  width: 46px;
+  height: 26px;
+
+  flex: 0 0 46px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 20px;
+
+  background: #d8e0e4;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.notification-toggle span {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 1px 3px rgba(15, 59, 89, 0.18);
+
+  transition: transform 0.2s ease;
+}
+
+.notification-toggle.is-active {
+  background: #0f3b59;
+}
+
+.notification-toggle.is-active span {
+  transform: translateX(20px);
+}
+
+.notification-toggle:focus-visible {
+  outline: 3px solid rgba(125, 146, 158, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   Profile Edit Modal
+========================================================= */
+
+.profile-edit-overlay {
+  position: fixed;
+
+  inset: 0;
+  z-index: 9999;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(15, 59, 89, 0.18);
+}
+
+.profile-edit-modal {
+  width: 100%;
+  max-width: 480px;
+
+  overflow: hidden;
+
+  border: 1px solid #e1e6e9;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(15, 59, 89, 0.16),
+    0 4px 12px rgba(15, 59, 89, 0.08);
+}
+
+.profile-edit-modal__header {
+  min-height: 68px;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+.profile-edit-modal__header h2 {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profile-edit-modal__close {
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #7d929e;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.profile-edit-modal__close:hover {
+  background: #f3f6f7;
+  color: #0f3b59;
+}
+
+.profile-edit-modal__body {
+  padding: 24px;
+}
+
+.profile-edit-modal__field {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.profile-edit-modal__field:last-child {
+  margin-bottom: 0;
+}
+
+.profile-edit-modal__field > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0f3b59;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-edit-modal__field input,
+.profile-edit-modal__field textarea {
+  width: 100%;
+
+  border: 1px solid #d8e0e4;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #0f3b59;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-edit-modal__field input {
+  height: 44px;
+  padding: 0 13px;
+}
+
+.profile-edit-modal__field textarea {
+  min-height: 112px;
+
+  padding: 12px 13px;
+
+  line-height: 1.6;
+
+  resize: vertical;
+}
+
+.profile-edit-modal__field input:focus,
+.profile-edit-modal__field textarea:focus {
+  border-color: #7d929e;
+
+  box-shadow: 0 0 0 3px rgba(125, 146, 158, 0.12);
+}
+
+.profile-edit-modal__footer {
+  padding: 16px 24px 20px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  border-top: 1px solid #edf0f2;
+}
+
+.profile-edit-modal__cancel,
+.profile-edit-modal__save {
+  min-width: 86px;
+  height: 40px;
+
+  padding: 0 18px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.profile-edit-modal__cancel {
+  border: 1px solid #d8e0e4;
+
+  background: #ffffff;
+  color: #0f3b59;
+}
+
+.profile-edit-modal__cancel:hover {
+  background: #f5f7f8;
+}
+
+.profile-edit-modal__save {
+  border: 1px solid #0f3b59;
+
+  background: #0f3b59;
+  color: #ffffff;
+}
+
+.profile-edit-modal__save:hover {
+  background: #163f59;
+}
+
+
+/* =========================================================
+   Logout Modal
+========================================================= */
+
+.logout-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+  z-index: 10000;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(15, 59, 89, 0.18);
+}
+
+.logout-modal {
+  width: 100%;
+  max-width: 400px;
+
+  overflow: hidden;
+
+  border: 1px solid #e1e6e9;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(15, 59, 89, 0.16),
+    0 4px 12px rgba(15, 59, 89, 0.08);
+}
+
+.logout-modal__content {
+  padding: 30px 28px 26px;
+
+  text-align: center;
+}
+
+.logout-modal__content h2 {
+  margin: 0 0 10px;
+
+  color: #0f3b59;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logout-modal__content p {
+  margin: 0;
+
+  color: #7d929e;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.logout-modal__actions {
+  padding: 16px 24px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  border-top: 1px solid #edf0f2;
+}
+
+.logout-modal__cancel,
+.logout-modal__confirm {
+  height: 42px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.logout-modal__cancel {
+  border: 1px solid #d8e0e4;
+
+  background: #ffffff;
+  color: #0f3b59;
+}
+
+.logout-modal__cancel:hover {
+  background: #f5f7f8;
+}
+
+.logout-modal__confirm {
+  border: 1px solid #0f3b59;
+
+  background: #0f3b59;
+  color: #ffffff;
+}
+
+.logout-modal__confirm:hover {
+  background: #163f59;
+}
+
+
+/* =========================================================
+   Tablet
+   768px ~ 1024px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mypage {
+    padding: 20px;
+  }
+
+  .mypage__inner {
+    min-height: 0;
+    display: block;
+  }
+
+  .mypage-sidebar {
+    display: none;
+  }
+
+  .mypage__content {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+  }
+
+
+  /* Tablet Tabs */
+
+  .mypage-tabs {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mypage-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mypage-tabs__button {
+    flex: 0 0 auto;
+
+    padding: 10px 16px;
+
+    border: 1px solid #e4e8ea;
+    border-radius: 20px;
+
+    background: #ffffff;
+    color: #7d929e;
+
+    font-size: 13px;
+    line-height: 1.2;
+
+    cursor: pointer;
+  }
+
+  .mypage-tabs__button.is-active {
+    border-color: #0f3b59;
+
+    background: #0f3b59;
+    color: #ffffff;
+  }
+
+
+  /* Profile */
+
+  .profile-section {
+    padding: 26px 30px;
+  }
+
+  .profile-section__image-wrap {
+    width: 110px;
+    height: 110px;
+
+    flex-basis: 110px;
+  }
+
+  .profile-section__description {
+    padding-right: 10px;
+  }
+
+
+  /* Quick Menu */
+
+  .quick-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+
+  /* Friends - 4개만 표시 */
+
+  .friends-list {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+
+    overflow: visible;
+  }
+
+  .friend-item {
+    min-width: 0;
+    display: block;
+  }
+
+  .friend-item:nth-child(n + 5) {
+    display: none;
+  }
+
+  .friend-item img {
+    width: 78px;
+    height: 78px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* Products */
+
+  .mypage-products,
+  .mypage-tab-products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+
+  /* 상품명 / 가격 12px */
+
+  .mypage-product-card__info h3,
+  .mypage-product-card__info strong {
+    font-size: 12px;
+  }
+
+
+  /* Posts */
+
+  .mypage-posts {
+    column-gap: 30px;
+  }
+
+  .mypage-posts::after {
+    display: none;
+  }
+
+
+  /* 게시물 글자 */
+
+  .mypage-post__content h3 {
+    font-size: 13px;
+  }
+
+  .mypage-post__content time,
+  .mypage-post__meta {
+    font-size: 12px;
+  }
+
+
+  /* 전체보기 / 더보기 */
+
+  .mypage .mypage-section__header .mypage-section__more,
+  .mypage .mypage-post-group__header .mypage-post-group__more {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .mypage-section__more-icon,
+  .mypage-post-group__more-icon {
+    width: 14px;
+    height: 14px;
+
+    flex: 0 0 14px;
+  }
+
+
+  /* Friends Tab */
+
+  .friends-tab-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   Mobile
+   320px ~ 767px
+========================================================= */
+
+@media (max-width: 767px) {
+  .mypage {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .mypage__inner {
+    width: 100%;
+    min-height: 0;
+
+    display: block;
+
+    border: 0;
+    border-radius: 0;
+
+    overflow: visible;
+  }
+
+
+  /* Sidebar 제거 */
+
+  .mypage-sidebar {
+    display: none !important;
+  }
+
+
+  /* 상단 탭 제거 */
+
+  .mypage-tabs {
+    display: none !important;
+  }
+
+
+  /* Content */
+
+  .mypage__content {
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* =========================================================
+     Profile Mobile
+  ========================================================= */
+
+  .profile-section {
+    width: 100%;
+    min-height: 0;
+
+    padding: 22px 18px 76px;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    text-align: center;
+  }
+
+  .profile-section__image-wrap {
+    width: 96px;
+    height: 96px;
+
+    flex: 0 0 96px;
+  }
+
+  .profile-section__info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .profile-section__info h1 {
+    font-size: 19px;
+  }
+
+  .profile-section__username {
+    margin-bottom: 12px;
+  }
+
+  .profile-section__description {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .profile-section__stats {
+    justify-content: center;
+  }
+
+  .profile-section__stats > div {
+    min-width: 70px;
+  }
+
+  .profile-section__stats strong {
+    font-size: 20px;
+  }
+
+  .profile-section__edit {
+    width: calc(100% - 36px);
+
+    right: 18px;
+    bottom: 18px;
+  }
+
+
+  /* =========================================================
+     Quick Menu Mobile
+  ========================================================= */
+
+  .quick-menu {
+    width: 100%;
+
+    margin-top: 14px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .quick-menu__card {
+    width: 100%;
+    min-width: 0;
+    height: 76px;
+
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .quick-menu__icon {
+    width: 21px;
+    height: 21px;
+
+    flex: 0 0 21px;
+  }
+
+  .quick-menu__text {
+    min-width: 0;
+  }
+
+  .quick-menu__text strong {
+    font-size: 12px;
+  }
+
+  .quick-menu__text small {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .quick-menu__arrow {
+    width: 14px;
+    height: 14px;
+
+    flex: 0 0 14px;
+
+    margin-left: auto;
+  }
+
+
+  /* =========================================================
+     Common Section Mobile
+  ========================================================= */
+
+  .mypage-section {
+    width: 100%;
+    margin-top: 26px;
+  }
+
+  .mypage-section__header,
+  .mypage-post-group__header {
+    margin-bottom: 8px;
+  }
+
+  .mypage-section__header h2 {
+    font-size: 16px;
+  }
+
+
+  /* 전체보기 12px */
+
+  .mypage .mypage-section__header .mypage-section__more {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .mypage-section__more-icon {
+    width: 14px;
+    height: 14px;
+
+    flex: 0 0 14px;
+  }
+
+
+  /* =========================================================
+     Friends Mobile
+  ========================================================= */
+
+  .friends-list {
+    width: 100%;
+
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .friends-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .friend-item {
+    min-width: 68px;
+
+    flex: 0 0 68px;
+
+    display: block;
+  }
+
+  .friend-item:nth-child(n + 5) {
+    display: block;
+  }
+
+  .friend-item img {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 6px;
+  }
+
+  .friend-item strong {
+    font-size: 11px;
+  }
+
+
+  /* =========================================================
+     Products Mobile
+  ========================================================= */
+
+  .mypage-products,
+  .mypage-tab-products {
+    width: 100%;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .mypage-product-card {
+    min-width: 0;
+  }
+
+  .mypage-product-card__info {
+    padding: 6px 6px 7px;
+  }
+
+  /* 상품명 12px */
+  .mypage-product-card__info h3 {
+    min-height: 0;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  /* 가격 12px */
+  .mypage-product-card__info strong {
+    font-size: 12px;
+  }
+
+
+  /* =========================================================
+     Posts Mobile
+  ========================================================= */
+
+  .mypage-posts {
+    width: 100%;
+
+    margin-top: 24px;
+    padding-bottom: 0;
+
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    border-bottom: 0;
+  }
+
+  .mypage-posts::after {
+    display: none;
+  }
+
+  .mypage-post-group {
+    width: 100%;
+  }
+
+  .mypage-post-group__header {
+    margin-bottom: 7px;
+  }
+
+  .mypage-post-group__header h2 {
+    font-size: 15px;
+  }
+
+
+  /* 더보기 12px */
+
+  .mypage .mypage-post-group__header .mypage-post-group__more {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .mypage-post-group__more-icon {
+    width: 14px;
+    height: 14px;
+
+    flex: 0 0 14px;
+  }
+
+
+  /* Post Card */
+
+  .mypage-post {
+    width: 100%;
+    min-height: 82px;
+
+    padding: 9px 0;
+
+    gap: 10px;
+  }
+
+  .mypage-post:last-child {
+    border-bottom: 0;
+  }
+
+  .mypage-post img {
+    width: 88px;
+    height: 62px;
+
+    flex: 0 0 88px;
+  }
+
+
+  /* 게시물 제목 13px */
+
+  .mypage-post__content h3 {
+    margin-bottom: 6px;
+
+    font-size: 13px;
+  }
+
+
+  /* 날짜 12px */
+
+  .mypage-post__content time {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+  }
+
+
+  /* 좋아요 / 댓글 12px */
+
+  .mypage-post__meta {
+    gap: 9px;
+
+    font-size: 12px;
+  }
+
+
+  /* =========================================================
+     Tab Content Mobile
+  ========================================================= */
+
+  .mypage-tab-content {
+    width: 100%;
+    min-height: 0;
+
+    padding-top: 4px;
+  }
+
+  .mypage-tab-content > h1 {
+    margin-bottom: 18px;
+
+    font-size: 20px;
+  }
+
+
+  /* =========================================================
+     Cart Mobile
+  ========================================================= */
+
+  .cart-item {
+    gap: 12px;
+  }
+
+  .cart-item img {
+    width: 90px;
+    height: 90px;
+
+    flex-basis: 90px;
+  }
+
+
+  /* =========================================================
+     Friends Tab Mobile
+  ========================================================= */
+
+  .friends-tab-list {
+    grid-template-columns: 1fr;
+  }
+
+  .friends-tab-card {
+    padding: 14px;
+  }
+
+
+  /* =========================================================
+     Account Settings Mobile
+  ========================================================= */
+
+  .account-settings__form {
+    max-width: none;
+
+    padding: 20px 16px;
+  }
+
+  .account-settings__field {
+    margin-bottom: 18px;
+  }
+
+  .account-settings__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .account-settings__message {
+    margin-right: 0;
+
+    text-align: center;
+  }
+
+  .account-settings__actions button {
+    width: 100%;
+  }
+
+
+  /* =========================================================
+     Notification Settings Mobile
+  ========================================================= */
+
+  .notification-settings__card {
+    max-width: none;
+
+    padding: 0 16px;
+  }
+
+  .notification-settings__item {
+    min-height: 88px;
+
+    gap: 14px;
+  }
+
+  .notification-settings__text strong {
+    font-size: 13px;
+  }
+
+  .notification-settings__text p {
+    font-size: 11px;
+  }
+
+
+  /* =========================================================
+     Profile Edit Modal Mobile
+  ========================================================= */
+
+  .profile-edit-overlay {
+    padding: 16px;
+  }
+
+  .profile-edit-modal {
+    max-width: 100%;
+  }
+
+  .profile-edit-modal__header {
+    min-height: 60px;
+
+    padding: 0 18px;
+  }
+
+  .profile-edit-modal__body {
+    padding: 20px 18px;
+  }
+
+  .profile-edit-modal__footer {
+    padding: 14px 18px 18px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-edit-modal__cancel,
+  .profile-edit-modal__save {
+    width: 100%;
+  }
+
+
+  /* =========================================================
+     Logout Modal Mobile
+  ========================================================= */
+
+  .logout-modal-overlay {
+    padding: 16px;
+  }
+
+  .logout-modal {
+    max-width: 100%;
+  }
+
+  .logout-modal__content {
+    padding: 26px 20px 22px;
+  }
+
+  .logout-modal__actions {
+    padding: 14px 18px 18px;
+  }
+}
+
+/* ========================================
+   구매 내역 아이콘 브랜드 컬러 적용
+======================================== */
+
+.quick-menu__card:first-child .quick-menu__icon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(23%)
+    saturate(1520%) hue-rotate(160deg) brightness(90%) contrast(94%);
+}
+
+.mypage-product-card {
+  cursor: pointer;
+}
+
+/* =========================================================
+   MyPage Mobile - Final UI Fix
+   기존 CSS 맨 아래 추가
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /* -----------------------------------------
+     공통 톤
+  ----------------------------------------- */
+
+  .profile-section,
+  .quick-menu__card,
+  .mypage-product-card,
+  .friends-tab-card,
+  .account-settings__form,
+  .notification-settings__card {
+    border-color: #eeeeee;
+    border-radius: 6px;
+  }
+
+
+  /* -----------------------------------------
+     프로필
+  ----------------------------------------- */
+
+  .profile-section {
+    border: 1px solid #eeeeee;
+  }
+
+  .profile-section__info h1 {
+    font-size: 18px;
+  }
+
+  .profile-section__username {
+    font-size: 12px;
+  }
+
+  .profile-section__description {
+    font-size: 12px;
+  }
+
+  .profile-section__stats strong {
+    font-size: 19px;
+  }
+
+  .profile-section__stats span {
+    font-size: 11px;
+  }
+
+
+  /* -----------------------------------------
+     바로가기 카드
+  ----------------------------------------- */
+
+  .quick-menu__card {
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+  }
+
+  .quick-menu__text strong {
+    font-size: 12px;
+  }
+
+  .quick-menu__text small {
+    font-size: 10px;
+  }
+
+
+  /* -----------------------------------------
+     섹션 제목
+  ----------------------------------------- */
+
+  .mypage-section__header h2,
+  .mypage-post-group__header h2 {
+    font-size: 16px;
+  }
+
+  .mypage .mypage-section__header .mypage-section__more,
+  .mypage .mypage-post-group__header .mypage-post-group__more {
+    font-size: 11px;
+  }
+
+
+  /* -----------------------------------------
+     나의 친구
+     가로 스크롤 + 마지막 캐릭터 잘림 방지
+  ----------------------------------------- */
+
+  .friends-list {
+    width: 100%;
+
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 12px 8px 0;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .friends-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .friend-item {
+    min-width: 68px;
+    flex: 0 0 68px;
+  }
+
+  .friend-item:nth-child(n + 5) {
+    display: block;
+  }
+
+  .friend-item img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .friend-item strong {
+    font-size: 11px;
+  }
+
+
+  /* -----------------------------------------
+     상품 카드
+  ----------------------------------------- */
+
+  .mypage-product-card {
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+  }
+
+  .mypage-product-card__info h3 {
+    font-size: 12px;
+  }
+
+  .mypage-product-card__info strong {
+    font-size: 12px;
+  }
+
+
+  /* -----------------------------------------
+     게시글
+     남아 있는 구분선 색상 통일
+  ----------------------------------------- */
+
+  .mypage-post {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .mypage-post:last-child {
+    border-bottom: 0;
+  }
+
+  .mypage-post__content h3 {
+    font-size: 13px;
+  }
+
+  .mypage-post__content time,
+  .mypage-post__meta {
+    font-size: 11px;
+  }
+
+
+  /* -----------------------------------------
+     구매내역 / 찜한상품 등
+     탭 페이지 상단선 색상 통일
+  ----------------------------------------- */
+
+  .mypage-full-post-list,
+  .cart-list {
+    border-top-color: #eeeeee;
+  }
+
+  .cart-item {
+    border-bottom-color: #eeeeee;
+  }
+
+
+  /* -----------------------------------------
+     저장한 게시물
+     제목 바로 아래 첫 번째 선 제거
+  ----------------------------------------- */
+
+  .mypage-tab-content > h1 + .mypage-full-post-list {
+    border-top: 0;
+  }
+
+
+  /* -----------------------------------------
+     개별 탭 제목
+  ----------------------------------------- */
+
+  .mypage-tab-content > h1 {
+    font-size: 19px;
+  }
+
+
+  /* -----------------------------------------
+     친구 전체보기 페이지
+  ----------------------------------------- */
+
+  .friends-tab-card {
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+  }
+
+  .friends-tab-card h3 {
+    font-size: 13px;
+  }
+
+  .friends-tab-card p {
+    font-size: 11px;
+  }
+
+
+  /* -----------------------------------------
+     설정 카드
+  ----------------------------------------- */
+
+  .account-settings__form,
+  .notification-settings__card {
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+  }
+
+  .notification-settings__item {
+    border-bottom-color: #eeeeee;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-section,
+  .quick-menu__card,
+  .mypage-product-card,
+  .friends-tab-card,
+  .account-settings__form,
+  .notification-settings__card {
+    border-radius: 4px;
+  }
+}
+
+/* =========================================================
+   MyPage - Final Design Balance
+   PC 기준 공통 디자인 정리
+========================================================= */
+
+/* 공통 선 / 라운드 */
+.mypage__inner,
+.profile-section,
+.mypage-product-card,
+.friends-tab-card,
+.account-settings__form,
+.notification-settings__card {
+  border-color: #eeeeee;
+  border-radius: 4px;
+}
+
+/* 메인 콘텐츠 */
+.mypage__content {
+  padding: 20px;
+}
+
+/* 프로필 */
+.profile-section {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+}
+
+/* 홈 섹션 간격 */
+.mypage-section {
+  margin-top: 32px;
+}
+
+/* 첫 번째 콘텐츠 섹션 */
+.profile-section + .mypage-section {
+  margin-top: 32px;
+}
+
+/* 섹션 제목 */
+.mypage-section__header {
+  margin-bottom: 14px;
+}
+
+.mypage-section__header h2 {
+  font-size: 18px;
+}
+
+/* 나의 친구 */
+.friends-list {
+  gap: 20px;
+}
+
+/* 상품 카드 */
+.mypage-products,
+.mypage-tab-products {
+  gap: 12px;
+}
+
+.mypage-product-card {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+}
+
+/* 게시글 영역 */
+.mypage-posts {
+  margin-top: 32px;
+  column-gap: 48px;
+}
+
+.mypage-post {
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* 가운데 게시글 구분선 */
+.mypage-posts::after {
+  background: #eeeeee;
+}
+
+/* 세부 페이지 목록 선 */
+.mypage-full-post-list,
+.cart-list {
+  border-top-color: #eeeeee;
+}
+
+.cart-item {
+  border-bottom-color: #eeeeee;
+}
+
+/* 친구 카드 */
+.friends-tab-card {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+}
+
+/* 설정 카드 */
+.account-settings__form,
+.notification-settings__card {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+}
+
+.notification-settings__item {
+  border-bottom-color: #eeeeee;
+}
+
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 767px) {
+  .mypage-section {
+    margin-top: 26px;
+  }
+
+  .profile-section + .mypage-section {
+    margin-top: 26px;
+  }
+
+  .mypage-section__header {
+    margin-bottom: 10px;
+  }
+
+  .friends-list {
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 12px 8px 0;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .friends-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .friend-item {
+    min-width: 68px;
+    flex: 0 0 68px;
+  }
+
+  .friend-item:nth-child(n + 5) {
+    display: block;
+  }
+
+  .mypage-posts {
+    margin-top: 26px;
+    gap: 26px;
+  }
+}
+
+/* =========================================================
+   MyPage PC Final
+   line: #eeeeee / radius: 4px
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  /* 전체 레이아웃 */
+  .mypage__inner {
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+  }
+
+  /* 왼쪽 메뉴 구분선 */
+  .mypage-sidebar {
+    border-right: 1px solid #eeeeee;
+  }
+
+  .mypage-sidebar__item {
+    border-bottom-color: #eeeeee;
+  }
+
+  /* 프로필 카드 */
+  .profile-section {
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+  }
+
+  /* 홈 섹션 간격 */
+  .mypage-section {
+    margin-top: 32px;
+  }
+
+  .mypage-section__header {
+    margin-bottom: 14px;
+  }
+
+  /* 친구 */
+  .friends-list {
+    gap: 20px;
+  }
+
+  /* 최근 구매 상품 */
+  .mypage-products,
+  .mypage-tab-products {
+    gap: 12px;
+  }
+
+  .mypage-product-card {
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+  }
+
+  /* 저장한 게시물 / 내가 쓴 글 */
+  .mypage-posts {
+    margin-top: 32px;
+    column-gap: 48px;
+  }
+
+  .mypage-posts::after {
+    background: #eeeeee;
+  }
+
+  .mypage-post {
+    border-bottom-color: #eeeeee;
+  }
+
+  /* 친구 전체보기 페이지 카드 */
+  .friends-tab-card {
+    border-color: #eeeeee;
+    border-radius: 4px;
+  }
+
+  /* 설정 관련 카드 */
+  .account-settings__form,
+  .notification-settings__card {
+    border-color: #eeeeee;
+    border-radius: 4px;
+  }
+
+  .notification-settings__item {
+    border-bottom-color: #eeeeee;
+  }
+
+  /* 구매내역 / 장바구니 등 목록 구분선 */
+  .mypage-full-post-list,
+  .cart-list {
+    border-top-color: #eeeeee;
+  }
+
+  .cart-item {
+    border-bottom-color: #eeeeee;
+  }
+}
+
+/* =========================================================
+   MyPage Mobile - Side Spacing
+========================================================= */
+
+@media (max-width: 767px) {
+  .mypage {
+    padding: 20px 8px 0;
+  }
+
+  .mypage__content {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .friends-list {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+
+    padding: 0 0 10px;
+    margin: 0;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .friends-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .friends-list .friend-item {
+    flex: 0 0 68px !important;
+    width: 68px;
+    min-width: 68px;
+    max-width: 68px;
+
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .friends-list {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .friends-list.is-dragging {
+    cursor: grabbing;
+  }
+
+  .friends-list img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+/* =========================================================
+   찜한 상품 카드 - 텍스트 크기 / 여백 최종 수정
+========================================================= */
+
+/* PC */
+@media (min-width: 1024px) {
+
+  .mypage-tab-products .mypage-product-card__info {
+    padding: 14px 12px 16px;
+  }
+
+  .mypage-tab-products .mypage-product-card__info h3 {
+    margin: 0 0 7px;
+
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .mypage-tab-products .mypage-product-card__info strong {
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+}
+
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .mypage-tab-products .mypage-product-card__info {
+    padding: 12px 10px 14px;
+  }
+
+  .mypage-tab-products .mypage-product-card__info h3 {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .mypage-tab-products .mypage-product-card__info strong {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+  .mypage-tab-products .mypage-product-card__info {
+    padding: 10px 10px 12px;
+  }
+
+  .mypage-tab-products .mypage-product-card__info h3 {
+    margin: 0 0 5px;
+
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .mypage-tab-products .mypage-product-card__info strong {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}

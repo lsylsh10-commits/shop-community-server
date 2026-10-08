@@ -1,0 +1,830 @@
+/* src/styles/signup.css */
+
+/* =========================
+   Signup Page
+========================= */
+
+.signup-page {
+  width: 100%;
+  background: #fff;
+}
+
+.signup-page__inner {
+  width: 100%;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 46px 24px 86px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Signup Header
+========================= */
+
+.signup-page__header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.signup-page__title {
+  margin: 0;
+  color: #0f3b59;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.signup-page__subtitle {
+  margin: 6px 0 0;
+  color: #7d929e;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   Signup Form
+========================= */
+
+.signup-form {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.signup-form__field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.signup-form__label {
+  display: block;
+  margin-bottom: 9px;
+  color: #0f3b59;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.signup-form__input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  outline: none;
+
+  background: #f1f5f7;
+  color: #0f3b59;
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.signup-form__input::placeholder {
+  color: #91a6b2;
+}
+
+.signup-form__input:focus {
+  border-color: #0f3b59;
+  background: #fff;
+}
+
+/* =========================
+   Password
+========================= */
+
+.signup-form__password {
+  position: relative;
+  width: 100%;
+}
+
+.signup-form__input--password {
+  padding-right: 54px;
+}
+
+.signup-form__password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.signup-form__password-toggle img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* =========================
+   Nickname
+========================= */
+
+.signup-form__input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.signup-form__input--nickname {
+  padding-right: 76px;
+}
+
+.signup-form__count {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+
+  color: #7d929e;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* =========================
+   Birth / Email / Address
+========================= */
+
+.signup-form__field--row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.signup-form__field--row .signup-form__label {
+  margin: 0;
+}
+
+.signup-form__field--row .signup-form__input {
+  min-width: 0;
+}
+
+/* =========================
+   Date
+========================= */
+
+.signup-form__date {
+  position: relative;
+  width: 100%;
+}
+
+.signup-form__date .signup-form__input {
+  padding-right: 52px;
+  color: #7d929e;
+}
+
+/* 브라우저 기본 달력 아이콘 숨김 */
+.signup-form__date
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 13px;
+
+  width: 30px;
+  height: 30px;
+
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.signup-form__date-icon {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* =========================
+   Address
+========================= */
+
+.signup-form__address {
+  position: relative;
+  width: 100%;
+}
+
+.signup-form__address .signup-form__input {
+  padding-right: 52px;
+}
+
+.signup-form__address-search {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.signup-form__address-search img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* =========================
+   Agreements
+========================= */
+
+.signup-agreements {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.signup-agreements__item {
+  display: flex;
+
+  min-height: 38px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.signup-agreements__label {
+  display: flex;
+
+  min-width: 0;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #222;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  cursor: pointer;
+}
+
+.signup-agreements__checkbox {
+  width: 22px;
+  height: 22px;
+
+  margin: 0;
+
+  flex: 0 0 22px;
+
+  accent-color: #0f3b59;
+
+  cursor: pointer;
+}
+
+.signup-agreements__view {
+  display: flex;
+
+  padding: 4px 0;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: 0;
+  background: transparent;
+
+  color: #222;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.signup-agreements__view span {
+  color: #222;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* =========================
+   Submit Button
+========================= */
+
+.signup-form__submit {
+  width: 100%;
+  height: 58px;
+
+  border: 1px solid #0f3b59;
+  border-radius: 8px;
+
+  background: #0f3b59;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.signup-form__submit:hover {
+  background: #123f5d;
+}
+
+/* =========================
+   Login Link
+========================= */
+
+.signup-form__login {
+  display: flex;
+
+  margin-top: 16px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  color: #7d929e;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.signup-form__login-button {
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: #0f3b59;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Tablet
+   768px ~ 1024px
+========================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .signup-page__inner {
+    padding: 42px 32px 70px;
+  }
+
+  .signup-form {
+    max-width: 520px;
+  }
+}
+
+/* =========================
+   Mobile
+   320px ~ 767px
+========================= */
+
+@media (max-width: 767px) {
+  .signup-page__inner {
+    padding: 30px 20px 32px;
+  }
+
+  .signup-page__header {
+    margin-bottom: 26px;
+  }
+
+  .signup-page__title {
+    font-size: 28px;
+  }
+
+  .signup-page__subtitle {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+
+  .signup-form__field {
+    margin-bottom: 18px;
+  }
+
+  .signup-form__label {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .signup-form__input {
+    height: 54px;
+    font-size: 13px;
+  }
+
+  .signup-form__password-toggle {
+    right: 12px;
+  }
+
+  .signup-form__password-toggle img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .signup-form__count {
+    font-size: 13px;
+  }
+
+  .signup-form__field--row {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  .signup-form__field--row .signup-form__label {
+    margin-bottom: 8px;
+  }
+
+  .signup-agreements {
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  .signup-agreements__item {
+    min-height: 38px;
+    gap: 8px;
+  }
+
+  .signup-agreements__label {
+    gap: 9px;
+    font-size: 13px;
+  }
+
+  .signup-agreements__checkbox {
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
+  }
+
+  .signup-agreements__view {
+    gap: 5px;
+    font-size: 13px;
+  }
+
+  .signup-agreements__view span {
+    font-size: 22px;
+  }
+
+  .signup-form__submit {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .signup-form__login {
+    margin-top: 14px;
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .signup-form__login-button {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   Small Mobile
+   320px ~ 359px
+========================= */
+
+@media (max-width: 359px) {
+  .signup-page__inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .signup-page__title {
+    font-size: 26px;
+  }
+
+  .signup-form__input {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .signup-form__input--password {
+    padding-right: 50px;
+  }
+
+  .signup-form__input--nickname {
+    padding-right: 68px;
+  }
+
+  .signup-form__count {
+    right: 14px;
+    font-size: 13px;
+  }
+
+  .signup-agreements__label {
+    gap: 7px;
+    font-size: 12px;
+  }
+
+  .signup-agreements__checkbox {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+
+  .signup-agreements__view {
+    font-size: 12px;
+  }
+
+  .signup-agreements__view span {
+    font-size: 20px;
+  }
+
+  .signup-form__login {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .signup-form__login-button {
+    font-size: 13px;
+  }
+}
+/* =========================
+   Address Modal
+========================= */
+
+.address-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.address-modal__content {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 28px;
+
+  border-radius: 16px;
+  background: #fff;
+
+  box-sizing: border-box;
+}
+
+.address-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 26px;
+}
+
+.address-modal__title {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.address-modal__close {
+  display: flex;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  color: #0f3b59;
+
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.address-modal__body {
+  width: 100%;
+}
+
+.address-modal__field {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.address-modal__field:last-child {
+  margin-bottom: 0;
+}
+
+.address-modal__label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.address-modal__input {
+  display: block;
+
+  width: 100%;
+  height: 54px;
+
+  padding: 0 16px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  outline: none;
+
+  background: #f1f5f7;
+  color: #0f3b59;
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.address-modal__input::placeholder {
+  color: #91a6b2;
+}
+
+.address-modal__input:focus {
+  border-color: #0f3b59;
+  background: #fff;
+}
+
+.address-modal__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.address-modal__button {
+  height: 52px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.address-modal__button--cancel {
+  border: 1px solid #d6e0e5;
+  background: #fff;
+  color: #0f3b59;
+}
+
+.address-modal__button--apply {
+  border: 1px solid #0f3b59;
+  background: #0f3b59;
+  color: #fff;
+}
+
+/* =========================
+   Address Modal Mobile
+========================= */
+
+@media (max-width: 767px) {
+  .address-modal {
+    padding: 20px;
+  }
+
+  .address-modal__content {
+    max-width: 100%;
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .address-modal__header {
+    margin-bottom: 22px;
+  }
+
+  .address-modal__title {
+    font-size: 20px;
+  }
+
+  .address-modal__input {
+    height: 52px;
+    font-size: 13px;
+  }
+
+  .address-modal__buttons {
+    margin-top: 24px;
+  }
+
+  .address-modal__button {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   SIGNUP PAGE 최종 여백 조정
+======================================== */
+
+/* PC */
+@media (min-width: 1025px) {
+  .signup-page__inner {
+    padding-top: 72px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .signup-page__inner {
+    padding-top: 60px;
+    padding-bottom: 32px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .signup-page__inner {
+    padding-top: 44px;
+    padding-bottom: 28px;
+  }
+}

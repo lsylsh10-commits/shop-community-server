@@ -1,0 +1,884 @@
+/* =========================
+   BASE
+========================= */
+
+.brand-story,
+.brand-story * {
+  box-sizing: border-box;
+}
+
+.brand-story {
+  width: 100%;
+  background: #ffffff;
+  color: #0f3b59;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.brand-section {
+  width: 100%;
+}
+
+.brand-inner {
+  position: relative;
+
+  width: min(1168px, calc(100% - 80px));
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.brand-section__label {
+  margin: 0 0 20px;
+
+  color: #7d929e;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.brand-section__title {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: clamp(36px, 3.2vw, 50px);
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  word-break: keep-all;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.brand-hero {
+  padding: 0 0 70px;
+}
+
+.brand-hero__inner {
+  width: min(1168px, calc(100% - 80px));
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 72px;
+
+  background-image:
+    url('/shop-community/images/brand/brand-hero.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.brand-hero__text {
+  position: relative;
+  z-index: 2;
+
+  width: 46%;
+  max-width: 430px;
+}
+
+.brand-hero__title {
+  margin: 0;
+
+  color: #0f3b59;
+
+  font-size: clamp(38px, 3.2vw, 50px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  word-break: keep-all;
+}
+
+.brand-hero__slogan {
+  margin: 28px 0 0;
+
+  color: #dba12c;
+
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.brand-hero__description {
+  margin: 28px 0 0;
+
+  color: #3e251e;
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  word-break: keep-all;
+}
+
+.brand-hero__signature {
+  margin-top: 36px;
+
+  color: #7d929e;
+
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.brand-hero__visual {
+  display: none;
+}
+
+
+/* =========================
+   OUR STORY
+========================= */
+
+.brand-story-section {
+  padding: 70px 0 80px;
+}
+
+.brand-story-section__inner {
+  width: min(1168px, calc(100% - 80px));
+  min-height: 660px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 72px;
+
+  background-image:
+    url('/shop-community/images/brand/brand-story.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.brand-story-section__visual {
+  display: none;
+}
+
+.brand-story-section__text {
+  position: relative;
+  z-index: 2;
+
+  width: 46%;
+  max-width: 470px;
+
+  padding-left: 24px;
+}
+
+.brand-story-section__copy {
+  margin-top: 34px;
+
+  color: #3e251e;
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  word-break: keep-all;
+}
+
+.brand-story-section__copy p {
+  margin: 0 0 22px;
+}
+
+.brand-story-section__copy p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   CHARACTERS
+========================= */
+
+.brand-characters {
+  padding: 80px 0 90px;
+}
+
+.brand-characters > .brand-inner {
+  overflow: visible;
+}
+
+.brand-characters__heading {
+  margin-bottom: 52px;
+}
+
+.brand-characters__intro {
+  margin: 24px 0 0;
+
+  color: #3e251e;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.brand-characters__guide {
+  margin: 14px 0 0;
+
+  color: #7d929e;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.brand-characters__scene {
+  position: relative;
+
+  width: 100%;
+  min-height: 700px;
+
+  overflow: hidden;
+
+  background-image:
+    url('/shop-community/images/brand/characters-room.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.brand-characters__image {
+  display: none;
+}
+
+
+/* =========================
+   CHARACTER HOTSPOTS
+========================= */
+
+.character-hotspot {
+  position: absolute;
+
+  width: 12%;
+  aspect-ratio: 1 / 1;
+
+  border: 0;
+  background: transparent;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.character-hotspot__text {
+  position: absolute;
+
+  left: 50%;
+  bottom: 135%;
+
+  min-width: 190px;
+  padding: 10px 14px;
+
+  transform: translate(-50%, 10px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  text-align: center;
+  pointer-events: none;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 16px;
+}
+
+.character-hotspot__text strong {
+  display: block;
+
+  color: #0f3b59;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.character-hotspot__text span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #3e251e;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  white-space: nowrap;
+}
+
+.character-hotspot:hover .character-hotspot__text,
+.character-hotspot:focus .character-hotspot__text,
+.character-hotspot:focus-visible .character-hotspot__text {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translate(-50%, 0);
+}
+
+
+/* =========================
+   캐릭터 실제 위치 - PC
+========================= */
+
+.character-hotspot--popo {
+  left: 7%;
+  top: 35%;
+}
+
+.character-hotspot--mungchi {
+  left: 82%;
+  top: 36%;
+}
+
+/* 짝이 = 테이블 밑 양말 */
+.character-hotspot--jjaki {
+  left: 20%;
+  top: 73%;
+}
+
+.character-hotspot--bbangi {
+  left: 40%;
+  top: 37%;
+}
+
+/* 반디 = 기운이 오른쪽 밴드 */
+.character-hotspot--bandi {
+  left: 70%;
+  top: 62%;
+}
+
+.character-hotspot--giuni {
+  left: 57%;
+  top: 68%;
+}
+
+
+/* =========================
+   캐릭터별 hover 문구 위치 - PC
+========================= */
+
+.character-hotspot--popo .character-hotspot__text {
+  bottom: 138%;
+}
+
+.character-hotspot--bbangi .character-hotspot__text {
+  bottom: 138%;
+}
+
+.character-hotspot--jjaki .character-hotspot__text {
+  bottom: 145%;
+}
+
+.character-hotspot--bandi .character-hotspot__text {
+  bottom: 160%;
+}
+
+.character-hotspot--giuni .character-hotspot__text {
+  bottom: 172%;
+}
+
+.character-hotspot--mungchi .character-hotspot__text {
+  bottom: 100%;
+}
+
+
+/* =========================
+   hover 문구 공통 배경
+========================= */
+
+.character-hotspot--popo .character-hotspot__text,
+.character-hotspot--mungchi .character-hotspot__text,
+.character-hotspot--jjaki .character-hotspot__text,
+.character-hotspot--bbangi .character-hotspot__text,
+.character-hotspot--bandi .character-hotspot__text,
+.character-hotspot--giuni .character-hotspot__text {
+  padding: 10px 14px;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 16px;
+}
+
+.character-hotspot--popo .character-hotspot__text strong,
+.character-hotspot--mungchi .character-hotspot__text strong,
+.character-hotspot--jjaki .character-hotspot__text strong,
+.character-hotspot--bbangi .character-hotspot__text strong,
+.character-hotspot--bandi .character-hotspot__text strong,
+.character-hotspot--giuni .character-hotspot__text strong {
+  color: #0f3b59;
+}
+
+.character-hotspot--popo .character-hotspot__text span,
+.character-hotspot--mungchi .character-hotspot__text span,
+.character-hotspot--jjaki .character-hotspot__text span,
+.character-hotspot--bbangi .character-hotspot__text span,
+.character-hotspot--bandi .character-hotspot__text span,
+.character-hotspot--giuni .character-hotspot__text span {
+  color: #3e251e;
+}
+
+
+/* =========================
+   FOR YOUR EVERYDAY
+========================= */
+
+.brand-everyday {
+  padding: 80px 0 90px;
+}
+
+.brand-everyday__inner {
+  width: min(1168px, calc(100% - 80px));
+  min-height: 640px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 72px;
+
+  background-image:
+    url('/shop-community/images/brand/brand-everyday.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.brand-everyday__text {
+  position: relative;
+  z-index: 2;
+
+  width: 43%;
+  max-width: 430px;
+}
+
+.brand-everyday__description {
+  margin: 30px 0 0;
+
+  color: #3e251e;
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  word-break: keep-all;
+}
+
+.brand-everyday__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 38px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #0f3b59;
+
+  color: #0f3b59;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.brand-everyday__button:hover {
+  gap: 16px;
+  opacity: 0.7;
+}
+
+.brand-everyday__visual {
+  display: none;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .brand-inner,
+  .brand-hero__inner,
+  .brand-story-section__inner,
+  .brand-everyday__inner {
+    width: calc(100% - 56px);
+  }
+
+  .brand-hero {
+    padding-bottom: 60px;
+  }
+
+  .brand-hero__inner {
+    min-height: 620px;
+    padding: 60px 52px;
+  }
+
+  .brand-hero__title {
+    font-size: clamp(40px, 5vw, 52px);
+  }
+
+  .brand-story-section {
+    padding: 60px 0 70px;
+  }
+
+  .brand-story-section__inner {
+    min-height: 620px;
+    padding: 60px 52px;
+  }
+
+  .brand-characters {
+    padding: 70px 0 80px;
+  }
+
+  .brand-characters__scene {
+    min-height: 600px;
+  }
+
+  .brand-everyday {
+    padding: 70px 0 80px;
+  }
+
+  .brand-everyday__inner {
+    min-height: 600px;
+    padding: 60px 52px;
+  }
+
+  .brand-hero__text,
+  .brand-story-section__text,
+  .brand-everyday__text {
+    width: 48%;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  .brand-inner,
+  .brand-hero__inner,
+  .brand-story-section__inner,
+  .brand-everyday__inner {
+    width: calc(100% - 40px);
+  }
+
+  .brand-section__label {
+    margin-bottom: 14px;
+    font-size: 10px;
+  }
+
+  .brand-section__title {
+    font-size: 34px;
+    line-height: 1.18;
+  }
+
+
+  /* =========================
+     MOBILE HERO
+  ========================= */
+
+  .brand-hero {
+    padding: 0 0 28px;
+  }
+
+  .brand-hero__inner {
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+
+    align-items: flex-start;
+
+    padding: 56px 24px 30px;
+
+    background-image:
+      url('/shop-community/images/brand/brand-hero-mobile.png');
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .brand-hero__text {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .brand-hero__title {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .brand-hero__slogan {
+    margin-top: 18px;
+
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .brand-hero__description {
+    margin-top: 20px;
+
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .brand-hero__signature {
+    margin-top: 20px;
+  }
+
+
+  /* =========================
+     MOBILE OUR STORY
+  ========================= */
+
+  .brand-story-section {
+    padding: 28px 0 30px;
+  }
+
+  .brand-story-section__inner {
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 55px 24px 30px;
+
+    background-image:
+      url('/shop-community/images/brand/brand-story-mobile.png');
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .brand-story-section__text {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 330px;
+
+    padding-left: 0;
+
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.95),
+      0 0 12px rgba(255, 255, 255, 0.78),
+      0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  .brand-story-section__text::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+
+    inset: -14px -16px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.58) 0%,
+        rgba(255, 255, 255, 0.42) 68%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+    filter: blur(8px);
+
+    border-radius: 18px;
+  }
+
+  .brand-story-section__copy {
+    margin-top: 22px;
+
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .brand-story-section__copy p {
+    margin-bottom: 16px;
+  }
+
+
+  /* =========================
+     MOBILE CHARACTERS
+  ========================= */
+
+  .brand-characters {
+    padding: 30px 0 32px;
+  }
+
+  .brand-characters__heading {
+    margin-bottom: 26px;
+  }
+
+  .brand-characters__intro {
+    margin-top: 18px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .brand-characters__guide {
+    margin-top: 9px;
+
+    font-size: 0;
+  }
+
+  .brand-characters__guide::after {
+    content: '캐릭터를 터치해보세요.';
+
+    color: #7d929e;
+
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .brand-characters__scene {
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+
+    background-image:
+      url('/shop-community/images/brand/characters-room-mobile.png');
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .character-hotspot {
+    width: 18%;
+  }
+
+  .character-hotspot__text {
+    min-width: 155px;
+
+    padding: 8px 10px;
+
+    border-radius: 14px;
+  }
+
+  .character-hotspot__text strong {
+    font-size: 14px;
+  }
+
+  .character-hotspot__text span {
+    margin-top: 3px;
+
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+
+  /* 모바일 캐릭터 위치 */
+
+  .character-hotspot--popo {
+    left: 22%;
+    top: 15%;
+  }
+
+  .character-hotspot--mungchi {
+    left: 60%;
+    top: 24%;
+  }
+
+  .character-hotspot--bbangi {
+    left: 21%;
+    top: 40%;
+  }
+
+  .character-hotspot--jjaki {
+    left: 68%;
+    top: 41%;
+  }
+
+  .character-hotspot--bandi {
+    left: 20%;
+    top: 70%;
+  }
+
+  .character-hotspot--giuni {
+    left: 60%;
+    top: 70%;
+  }
+
+
+  /* 모바일 캐릭터 설명 위치 */
+
+  .character-hotspot--popo .character-hotspot__text,
+  .character-hotspot--mungchi .character-hotspot__text {
+    top: auto;
+    bottom: 90%;
+  }
+
+  .character-hotspot--bbangi .character-hotspot__text,
+  .character-hotspot--jjaki .character-hotspot__text,
+  .character-hotspot--bandi .character-hotspot__text,
+  .character-hotspot--giuni .character-hotspot__text {
+    top: auto;
+    bottom: 115%;
+  }
+
+
+  /* =========================
+     MOBILE EVERYDAY
+  ========================= */
+
+  .brand-everyday {
+    padding: 30px 0 35px;
+  }
+
+  .brand-everyday__inner {
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+
+    align-items: flex-start;
+
+    padding: 58px 24px 30px;
+
+    background-image:
+      url('/shop-community/images/brand/brand-everyday-mobile.png');
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .brand-everyday__text {
+    width: 100%;
+    max-width: 315px;
+  }
+
+  .brand-everyday__description {
+    margin-top: 20px;
+
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .brand-everyday__button {
+    margin-top: 22px;
+
+    font-size: 14px;
+  }
+}
