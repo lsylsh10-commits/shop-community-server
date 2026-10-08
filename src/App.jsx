@@ -45,7 +45,7 @@ function ScrollManager() {
 
 function App() {
   return (
-    <BrowserRouter basename="/shop-community">
+    <BrowserRouter basename="/shop-community-server">
       <ScrollManager />
 
       <Header />
