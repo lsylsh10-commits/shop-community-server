@@ -1,9 +1,32 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { products } from '../data/ShopData'
 import '../styles/BestNew.css'
 
 function BestNew() {
+    const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const response = await fetch(
+          'https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json'
+        )
+
+        if (!response.ok) {
+          throw new Error('상품 데이터를 불러오지 못했습니다.')
+        }
+
+        const data = await response.json()
+
+        setProducts(data.products || [])
+      } catch (error) {
+        console.error('BEST & NEW 상품 데이터 로딩 실패:', error)
+        setProducts([])
+      }
+    }
+
+    loadProducts()
+  }, [])
   const [searchParams, setSearchParams] = useSearchParams()
 
   const initialTab =

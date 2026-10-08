@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CartList from "../components/cart/CartList";
 import CartSummary from "../components/cart/CartSummary";
 import RecommendedProducts from "../components/cart/RecommendedProducts";
-
-import { products } from "../data/ShopData";
 
 import "../styles/cart.css";
 
@@ -43,27 +41,52 @@ function Cart() {
 
   // --------------------------------------------------
   // 추천 상품
-  // 장바구니에 담긴 상품 제외 후 랜덤 4개
+  // 서버 상품 데이터에서 장바구니 상품 제외 후 랜덤 4개
   // --------------------------------------------------
 
-  const [recommendedProducts] = useState(() => {
-    const savedCartProducts = getSavedCartProducts();
+  const [recommendedProducts, setRecommendedProducts] =
+    useState([]);
 
-    const availableProducts = products.filter(
-      (product) =>
-        !savedCartProducts.some(
-          (cartProduct) => cartProduct.id === product.id
-        )
-    );
+  useEffect(() => {
+    const loadRecommendedProducts = async () => {
+      try {
+        const response = await fetch(
+          "https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json"
+        );
 
-    return [...availableProducts]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 4)
-      .map((product) => ({
-        ...product,
-        image: product.mainImage,
-      }));
-  });
+        if (!response.ok) {
+          throw new Error("상품 데이터를 불러오지 못했습니다.");
+        }
+
+        const data = await response.json();
+        const products = data.products || [];
+
+        const savedCartProducts = getSavedCartProducts();
+
+        const availableProducts = products.filter(
+          (product) =>
+            !savedCartProducts.some(
+              (cartProduct) => cartProduct.id === product.id
+            )
+        );
+
+        const recommended = [...availableProducts]
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 4)
+          .map((product) => ({
+            ...product,
+            image: product.mainImage,
+          }));
+
+        setRecommendedProducts(recommended);
+      } catch (error) {
+        console.error("추천 상품 데이터 로딩 실패:", error);
+        setRecommendedProducts([]);
+      }
+    };
+
+    loadRecommendedProducts();
+  }, []);
 
   // --------------------------------------------------
   // 장바구니 변경 내용을 localStorage에도 저장

@@ -5,7 +5,6 @@ import {
   characters,
 } from "../../data/homeData";
 
-import { products } from "../../data/ShopData";
 
 
 // 섹션 제목과 더보기
@@ -243,27 +242,6 @@ export function ProductSection({
 }
 
 
-// 홈에 보여줄 실제 커뮤니티 후기 2개
-const communityPosts = [
-  {
-    ...products
-      .find((product) => product.id === 1)
-      ?.communityReviews.find(
-        (review) => review.id === "product-1-02"
-      ),
-    characterImage:
-      "https://lsylsh10-commits.github.io/shop-community-server/images/shop/popo.png",
-  },
-  {
-    ...products
-      .find((product) => product.id === 2)
-      ?.communityReviews.find(
-        (review) => review.id === "product-2-01"
-      ),
-    characterImage:
-      "https://lsylsh10-commits.github.io/shop-community-server/images/shop/jjagi.png",
-  },
-].filter((post) => post.id);
 
 
 // 커뮤니티 카드
@@ -393,6 +371,52 @@ function CommunityCard({ post }) {
 
 // 커뮤니티 미리보기
 export function CommunityPreview() {
+    const [communityPosts, setCommunityPosts] = useState([]);
+
+  useEffect(() => {
+    const loadCommunityPosts = async () => {
+      try {
+        const response = await fetch(
+          "https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json"
+        );
+
+        if (!response.ok) {
+          throw new Error("커뮤니티 데이터를 불러오지 못했습니다.");
+        }
+
+        const data = await response.json();
+        const products = data.products || [];
+
+        const posts = [
+          {
+            ...products
+              .find((product) => product.id === 1)
+              ?.communityReviews.find(
+                (review) => review.id === "product-1-02"
+              ),
+            characterImage:
+              "https://lsylsh10-commits.github.io/shop-community-server/images/shop/popo.png",
+          },
+          {
+            ...products
+              .find((product) => product.id === 2)
+              ?.communityReviews.find(
+                (review) => review.id === "product-2-01"
+              ),
+            characterImage:
+              "https://lsylsh10-commits.github.io/shop-community-server/images/shop/jjagi.png",
+          },
+        ].filter((post) => post.id);
+
+        setCommunityPosts(posts);
+      } catch (error) {
+        console.error("홈 커뮤니티 데이터 로딩 실패:", error);
+        setCommunityPosts([]);
+      }
+    };
+
+    loadCommunityPosts();
+  }, []);  
   return (
     <section className="home-section">
       <SectionHeading

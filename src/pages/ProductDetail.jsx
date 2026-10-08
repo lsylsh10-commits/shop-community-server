@@ -1,5 +1,5 @@
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { products } from '../data/ShopData'
 
 import ProductGallery from '../components/product/ProductGallery'
 import ProductInfo from '../components/product/ProductInfo'
@@ -11,7 +11,41 @@ import '../styles/productDetail.css'
 function ProductDetail() {
   const { id } = useParams()
 
-  const product = products.find((item) => item.id === Number(id))
+  const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const loadProduct = async () => {
+      try {
+        const response = await fetch(
+          'https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json'
+        )
+
+        if (!response.ok) {
+          throw new Error('상품 데이터를 불러오지 못했습니다.')
+        }
+
+        const data = await response.json()
+
+        const foundProduct = (data.products || []).find(
+          (item) => item.id === Number(id)
+        )
+
+        setProduct(foundProduct || null)
+      } catch (error) {
+        console.error('상품 상세 데이터 로딩 실패:', error)
+        setProduct(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadProduct()
+  }, [id])
+
+  if (loading) {
+    return null
+  }
 
   if (!product) {
     return (

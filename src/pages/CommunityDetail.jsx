@@ -3,7 +3,6 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import { detailComments } from '../data/communityDetail'
 import { communityPosts } from './community.js'
-import { products } from '../data/ShopData.js'
 
 import '../styles/community-detail.css'
 
@@ -12,6 +11,34 @@ function CommunityDetail() {
 
   const { id } = useParams()
   const navigate = useNavigate()
+      const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const response = await fetch(
+          'https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json'
+        )
+
+        if (!response.ok) {
+          throw new Error('상품 데이터를 불러오지 못했습니다.')
+        }
+
+        const data = await response.json()
+
+        setProducts(data.products || [])
+      } catch (error) {
+        console.error(
+          '커뮤니티 상세 상품 데이터 로딩 실패:',
+          error
+        )
+
+        setProducts([])
+      }
+    }
+
+    loadProducts()
+  }, [])
 
     const userPosts = (() => {
     try {

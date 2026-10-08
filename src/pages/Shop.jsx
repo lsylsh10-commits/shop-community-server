@@ -1,18 +1,44 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import '../styles/Shop.css'
 
-import {
-  categories,
-  products,
-  characters,
-} from '../data/ShopData'
-
 function Shop() {
   const navigate = useNavigate()
 
+  const [categories, setCategories] = useState([])
+  const [products, setProducts] = useState([])
+  const [characters, setCharacters] = useState([])
+
   const [likedProducts, setLikedProducts] = useState([])
+
+  useEffect(() => {
+    const loadShopData = async () => {
+      try {
+        const response = await fetch(
+          'https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json'
+        )
+
+        if (!response.ok) {
+          throw new Error('상품 데이터를 불러오지 못했습니다.')
+        }
+
+        const data = await response.json()
+
+        setCategories(data.categories || [])
+        setProducts(data.products || [])
+        setCharacters(data.characters || [])
+      } catch (error) {
+        console.error('마켓 데이터 로딩 실패:', error)
+
+        setCategories([])
+        setProducts([])
+        setCharacters([])
+      }
+    }
+
+    loadShopData()
+  }, [])
 
   const toggleLike = (productId) => {
     setLikedProducts((prev) =>
@@ -36,7 +62,6 @@ function Shop() {
     navigate(`/shop/products?category=${categoryId}`)
   }
 
-  // ShopData는 수정하지 않고
   // 추천 상품만 Shop.jsx 내부에서 지정
   const recommendedProductIds = [13, 15, 18, 19]
 
