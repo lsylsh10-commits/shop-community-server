@@ -41,8 +41,8 @@ function PasswordField({
           <img
             src={
               isVisible
-                ? "/shop-community/images/login/eyeson.svg"
-                : "/shop-community/images/login/eyesoff.svg"
+                ? "https://lsylsh10-commits.github.io/shop-community-server/images/login/eyeson.svg"
+                : "https://lsylsh10-commits.github.io/shop-community-server/images/login/eyesoff.svg"
             }
             alt=""
           />

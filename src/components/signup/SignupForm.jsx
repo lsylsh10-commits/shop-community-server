@@ -214,7 +214,7 @@ function SignupForm() {
             />
 
             <img
-              src="/shop-community/images/signup/calendar.svg"
+              src="https://lsylsh10-commits.github.io/shop-community-server/images/signup/calendar.svg"
               alt=""
               className="signup-form__date-icon"
             />
@@ -263,7 +263,7 @@ function SignupForm() {
               aria-label="주소 입력"
               onClick={handleAddressModalOpen}
             >
-              <img src="/shop-community/images/signup/search.svg" alt="" />
+              <img src="https://lsylsh10-commits.github.io/shop-community-server/images/signup/search.svg" alt="" />
             </button>
           </div>
         </div>

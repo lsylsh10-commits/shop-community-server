@@ -425,8 +425,8 @@ function ProductList() {
               <img
                 src={
                   isCharacterOpen
-                    ? '/shop-community/images/shop/character-banner.png'
-                    : '/shop-community/images/shop/all-goods-banner.png'
+                    ? 'https://lsylsh10-commits.github.io/shop-community-server/images/shop/character-banner.png'
+                    : 'https://lsylsh10-commits.github.io/shop-community-server/images/shop/all-goods-banner.png'
                 }
                 alt={
                   isCharacterOpen
@@ -644,7 +644,7 @@ function ProductList() {
               }
             >
               <img
-                src="/shop-community/images/shop/icons/filter.svg"
+                src="https://lsylsh10-commits.github.io/shop-community-server/images/shop/icons/filter.svg"
                 alt=""
                 className="product-list-filter-icon"
               />

@@ -12,16 +12,16 @@ export const socialLoginOptions = [
   {
     id: "naver",
     name: "네이버로 로그인",
-    icon: "/shop-community/images/login/naver.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/login/naver.svg",
   },
   {
     id: "kakao",
     name: "카카오로 로그인",
-    icon: "/shop-community/images/login/kakao.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/login/kakao.svg",
   },
   {
     id: "google",
     name: "구글로 로그인",
-    icon: "/shop-community/images/login/google.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/login/google.svg",
   },
 ];

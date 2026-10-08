@@ -3,25 +3,25 @@ const quickMenus = [
     id: "orders",
     title: "구매 내역",
     description: "주문한 상품을 확인해보세요.",
-    icon: "/shop-community/images/mypage/bag.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/bag.svg",
   },
   {
     id: "friends",
     title: "나의 친구",
     description: "나와 함께하는 하찮은 친구들",
-    icon: "/shop-community/images/mypage/users.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/users.svg",
   },
   {
     id: "wishlist",
     title: "찜한 상품",
     description: "찜해둔 상품을 모아봤어요.",
-    icon: "/shop-community/images/mypage/heart.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/heart.svg",
   },
   {
     id: "liked",
     title: "저장한 게시물",
     description: "나중에 다시 볼 게시물이에요.",
-    icon: "/shop-community/images/mypage/bookmark.svg",
+    icon: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/bookmark.svg",
   },
 ];
 
@@ -47,7 +47,7 @@ function QuickMenu({ onTabChange }) {
           </div>
 
           <img
-            src="/shop-community/images/mypage/next.svg"
+            src="https://lsylsh10-commits.github.io/shop-community-server/images/mypage/next.svg"
             alt=""
             className="quick-menu__arrow"
           />

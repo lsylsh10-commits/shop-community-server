@@ -175,7 +175,7 @@ function Header() {
             onClick={closeMenu}
           >
             <img
-              src="/shop-community/images/home/logo.png"
+              src="https://lsylsh10-commits.github.io/shop-community-server/images/home/logo.png"
               alt="HAJJAN"
             />
           </Link>
@@ -462,7 +462,7 @@ function Header() {
                 aria-label="마이페이지"
               >
                 <img
-                  src="/shop-community/images/mypage/profile01.png"
+                  src="https://lsylsh10-commits.github.io/shop-community-server/images/mypage/profile01.png"
                   alt="프로필"
                 />
               </Link>

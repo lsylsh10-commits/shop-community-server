@@ -65,7 +65,7 @@ function SocialLoginModal({ provider, onClose }) {
 
         <div className="social-modal__body">
           <img
-            src={`/shop-community/images/login/${provider}.svg`}
+            src={`https://lsylsh10-commits.github.io/shop-community-server/images/login/${provider}.svg`}
             alt=""
             className="social-modal__logo"
           />

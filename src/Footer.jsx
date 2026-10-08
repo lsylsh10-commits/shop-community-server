@@ -22,28 +22,28 @@ function Footer() {
           <div className="footer-social">
             <a href="#" aria-label="인스타그램">
               <img
-                src="/shop-community/images/footer/instagram.png"
+                src="https://lsylsh10-commits.github.io/shop-community-server/images/footer/instagram.png"
                 alt="인스타그램"
               />
             </a>
 
             <a href="#" aria-label="유튜브">
               <img
-                src="/shop-community/images/footer/youtube.png"
+                src="https://lsylsh10-commits.github.io/shop-community-server/images/footer/youtube.png"
                 alt="유튜브"
               />
             </a>
 
             <a href="#" aria-label="네이버">
               <img
-                src="/shop-community/images/footer/naver.png"
+                src="https://lsylsh10-commits.github.io/shop-community-server/images/footer/naver.png"
                 alt="네이버"
               />
             </a>
 
             <a href="#" aria-label="X">
               <img
-                src="/shop-community/images/footer/x.png"
+                src="https://lsylsh10-commits.github.io/shop-community-server/images/footer/x.png"
                 alt="X"
               />
             </a>
@@ -58,7 +58,7 @@ function Footer() {
         {/* 브랜드 로고 */}
         <div className="footer-brand">
           <img
-            src="/shop-community/images/home/logo.png"
+            src="https://lsylsh10-commits.github.io/shop-community-server/images/home/logo.png"
             alt="HAJJAN"
           />
           <p>작은 것들이 자꾸 눈에 밟혀.</p>

@@ -63,7 +63,7 @@ function CommunityDetail() {
           : {
               name: item.author || '나',
               profile:
-                '/shop-community/images/community/community-profile01.png',
+                'https://lsylsh10-commits.github.io/shop-community-server/images/community/community-profile01.png',
             },
 
       content: Array.isArray(item.content)
@@ -77,9 +77,9 @@ function CommunityDetail() {
         : isWalkPost
           ? [
               item.image,
-              '/shop-community/images/community/detail02.png',
-              '/shop-community/images/community/detail03.png',
-              '/shop-community/images/community/detail04.png',
+              'https://lsylsh10-commits.github.io/shop-community-server/images/community/detail02.png',
+              'https://lsylsh10-commits.github.io/shop-community-server/images/community/detail03.png',
+              'https://lsylsh10-commits.github.io/shop-community-server/images/community/detail04.png',
             ].filter(Boolean)
           : savedImages,
 
@@ -165,7 +165,7 @@ const commentSets = [
       id: 101,
       author: '포포좋아',
       date: '20분 전',
-      profile: '/shop-community/images/community/comment-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile01.png',
       content: '사진 너무 귀여워요 ㅋㅋㅋ 저도 하나 데려오고 싶어요!',
       likes: 12,
       comments: 0,
@@ -175,7 +175,7 @@ const commentSets = [
       id: 102,
       author: '하찮은직장인',
       date: '35분 전',
-      profile: '/shop-community/images/community/comment-profile03.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile03.png',
       content: '이런 거 보면 괜히 기분 좋아짐 ㅠㅠ 너무 귀엽네요',
       likes: 7,
       comments: 0,
@@ -188,7 +188,7 @@ const commentSets = [
       id: 201,
       author: '뭉치수집가',
       date: '15분 전',
-      profile: '/shop-community/images/community/comment-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile01.png',
       content: '실물도 이렇게 귀여운가요?? 사진 보고 완전 영업당했어요 ㅋㅋ',
       likes: 18,
       comments: 0,
@@ -198,7 +198,7 @@ const commentSets = [
       id: 202,
       author: '퇴근시켜줘',
       date: '1시간 전',
-      profile: '/shop-community/images/community/comment-profile03.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile03.png',
       content: '하찮은 친구들 하나씩 늘어날 때마다 통장은 울고 저는 행복해요...',
       likes: 23,
       comments: 0,
@@ -211,7 +211,7 @@ const commentSets = [
       id: 301,
       author: '기운이충전중',
       date: '10분 전',
-      profile: '/shop-community/images/community/comment-profile03.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile03.png',
       content: '사진 분위기 너무 좋다 ㅎㅎ 캐릭터랑 진짜 잘 어울려요!',
       likes: 5,
       comments: 0,
@@ -221,7 +221,7 @@ const commentSets = [
       id: 302,
       author: '오늘도하찮게',
       date: '40분 전',
-      profile: '/shop-community/images/community/comment-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile01.png',
       content: '저도 이거 쓰고 있는데 볼 때마다 귀여워서 만족 중이에요 ㅋㅋㅋ',
       likes: 14,
       comments: 0,
@@ -234,7 +234,7 @@ const commentSets = [
       id: 401,
       author: '짝이최애',
       date: '25분 전',
-      profile: '/shop-community/images/community/comment-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile01.png',
       content: '아니 사진 너무 잘 찍으셨는데요??ㅋㅋㅋ 저장하고 싶어요',
       likes: 9,
       comments: 0,
@@ -244,7 +244,7 @@ const commentSets = [
       id: 402,
       author: '월급은스쳐갈뿐',
       date: '2시간 전',
-      profile: '/shop-community/images/community/comment-profile03.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile03.png',
       content: '귀여운 건 못 참지... 장바구니 또 늘어나겠네요 😂',
       likes: 16,
       comments: 0,
@@ -257,7 +257,7 @@ const commentSets = [
       id: 501,
       author: '빵이러버',
       date: '30분 전',
-      profile: '/shop-community/images/community/comment-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile01.png',
       content: '이 조합 너무 귀엽잖아요 ㅠㅠ 보고만 있어도 힐링됨',
       likes: 11,
       comments: 0,
@@ -267,7 +267,7 @@ const commentSets = [
       id: 502,
       author: '퇴근만기다림',
       date: '1시간 전',
-      profile: '/shop-community/images/community/comment-profile03.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/comment-profile03.png',
       content: '회사에서 몰래 보다가 웃었어요 ㅋㅋㅋ 오늘도 버텨봅니다...',
       likes: 21,
       comments: 0,
@@ -388,7 +388,7 @@ const [comments, setComments] = useState(() =>
       id: Date.now(),
       author: '나',
       date: '방금 전',
-      profile: '/shop-community/images/community/community-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/community-profile01.png',
       content: commentText,
       likes: 0,
       comments: 0,
@@ -466,7 +466,7 @@ const [comments, setComments] = useState(() =>
       id: Date.now(),
       author: '나',
       date: '방금 전',
-      profile: '/shop-community/images/community/community-profile01.png',
+      profile: 'https://lsylsh10-commits.github.io/shop-community-server/images/community/community-profile01.png',
       content: replyText,
       likes: 0,
       replies: [],
@@ -1122,7 +1122,7 @@ const [comments, setComments] = useState(() =>
               <div className="detail-comment-write">
                 <img
                   className="detail-comment-profile"
-                  src="/shop-community/images/community/community-profile01.png"
+                  src="https://lsylsh10-commits.github.io/shop-community-server/images/community/community-profile01.png"
                   alt="내 프로필"
                 />
 

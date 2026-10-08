@@ -70,8 +70,8 @@ function CartItem({
             <img
               src={
                 product.liked
-                  ? "/shop-community/images/cart/hearton.svg"
-                  : "/shop-community/images/cart/heartoff.svg"
+                  ? "https://lsylsh10-commits.github.io/shop-community-server/images/cart/hearton.svg"
+                  : "https://lsylsh10-commits.github.io/shop-community-server/images/cart/heartoff.svg"
               }
               alt=""
             />

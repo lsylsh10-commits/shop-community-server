@@ -25,10 +25,10 @@ function SectionHeading({ title, href }) {
 // 메인 비주얼 - 4장 자동 슬라이드
 export function MainVisual() {
   const banners = [
-    "/shop-community/images/home/banner01.jpg",
-    "/shop-community/images/home/banner02.png",
-    "/shop-community/images/home/banner03.png",
-    "/shop-community/images/home/banner04.png",
+    "https://lsylsh10-commits.github.io/shop-community-server/images/home/banner01.jpg",
+    "https://lsylsh10-commits.github.io/shop-community-server/images/home/banner02.png",
+    "https://lsylsh10-commits.github.io/shop-community-server/images/home/banner03.png",
+    "https://lsylsh10-commits.github.io/shop-community-server/images/home/banner04.png",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -252,7 +252,7 @@ const communityPosts = [
         (review) => review.id === "product-1-02"
       ),
     characterImage:
-      "/shop-community/images/shop/popo.png",
+      "https://lsylsh10-commits.github.io/shop-community-server/images/shop/popo.png",
   },
   {
     ...products
@@ -261,7 +261,7 @@ const communityPosts = [
         (review) => review.id === "product-2-01"
       ),
     characterImage:
-      "/shop-community/images/shop/jjagi.png",
+      "https://lsylsh10-commits.github.io/shop-community-server/images/shop/jjagi.png",
   },
 ].filter((post) => post.id);
 
@@ -422,7 +422,7 @@ export function PromotionBanner() {
     >
       <picture>
         <img
-          src="/shop-community/images/home/promotion.jpg"
+          src="https://lsylsh10-commits.github.io/shop-community-server/images/home/promotion.jpg"
           alt="별일 없어도, 우리는 잘 지내. 하찮은 친구들의 브랜드 스토리"
           loading="lazy"
         />

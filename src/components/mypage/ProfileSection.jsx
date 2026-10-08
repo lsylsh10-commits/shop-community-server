@@ -32,7 +32,7 @@ function ProfileSection() {
       <section className="profile-section">
         <div className="profile-section__image-wrap">
           <img
-            src="/shop-community/images/mypage/profile01.png"
+            src="https://lsylsh10-commits.github.io/shop-community-server/images/mypage/profile01.png"
             alt="프로필"
             className="profile-section__image"
           />

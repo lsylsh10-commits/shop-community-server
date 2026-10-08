@@ -145,7 +145,7 @@ function BestNew() {
 
         <section className="best-new-banner">
           <img
-            src="/shop-community/images/shop/all-goods-banner.png"
+            src="https://lsylsh10-commits.github.io/shop-community-server/images/shop/all-goods-banner.png"
             alt="BEST & NEW 배너"
           />
         </section>
@@ -265,7 +265,7 @@ function BestNew() {
                 }
               >
                 <img
-                  src="/shop-community/images/shop/icons/filter.svg"
+                  src="https://lsylsh10-commits.github.io/shop-community-server/images/shop/icons/filter.svg"
                   alt=""
                   className="best-new-filter-icon"
                 />
@@ -428,7 +428,7 @@ function BestNew() {
                   aria-label="다음 페이지"
                 >
                   <img
-                    src="/shop-community/images/shop/icons/pagination-next.svg"
+                    src="https://lsylsh10-commits.github.io/shop-community-server/images/shop/icons/pagination-next.svg"
                     alt=""
                   />
                 </button>

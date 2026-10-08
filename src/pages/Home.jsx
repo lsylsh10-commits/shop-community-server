@@ -18,7 +18,7 @@ function Home() {
     const loadProducts = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.BASE_URL}data/shop-data.json`
+          "https://lsylsh10-commits.github.io/shop-community-server/data/shop-data.json"
         );
 
         if (!response.ok) {

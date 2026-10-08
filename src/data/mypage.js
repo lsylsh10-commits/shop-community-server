@@ -2,32 +2,32 @@ export const friends = [
   {
     id: 1,
     name: "포포",
-    image: "/shop-community/images/mypage/popo.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/popo.png",
   },
   {
     id: 2,
     name: "뭉치",
-    image: "/shop-community/images/mypage/mungchi.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/mungchi.png",
   },
   {
     id: 3,
     name: "짝이",
-    image: "/shop-community/images/mypage/jjagi.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/jjagi.png",
   },
   {
     id: 4,
     name: "빵이",
-    image: "/shop-community/images/mypage/bbangi.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/bbangi.png",
   },
   {
     id: 5,
     name: "반디",
-    image: "/shop-community/images/mypage/bandi.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/bandi.png",
   },
   {
     id: 6,
     name: "기운이",
-    image: "/shop-community/images/mypage/giuni.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/giuni.png",
   },
 ];
 
@@ -36,31 +36,31 @@ export const recentProducts = [
     id: 1,
     name: "뭉치 먼지털이너",
     price: 12000,
-    image: "/shop-community/images/mypage/product01.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product01.png",
   },
   {
     id: 2,
     name: "하찮이들 한복인형",
     price: 12000,
-    image: "/shop-community/images/mypage/product02.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product02.png",
   },
   {
     id: 3,
     name: "하찮 캐릭터 스티커 세트",
     price: 8000,
-    image: "/shop-community/images/mypage/product03.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product03.png",
   },
   {
     id: 4,
     name: "봉제인형 키링",
     price: 9900,
-    image: "/shop-community/images/mypage/product04.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product04.png",
   },
   {
     id: 5,
     name: "클리어 키링",
     price: 8000,
-    image: "/shop-community/images/mypage/product05.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product05.png",
   },
 ];
 
@@ -69,19 +69,19 @@ export const wishlist = [
     id: 1,
     name: "포포 캐릭터 키링",
     price: 9900,
-    image: "/shop-community/images/mypage/product06.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product06.png",
   },
   {
     id: 2,
     name: "하찮 캐릭터 엽서 세트",
     price: 6000,
-    image: "/shop-community/images/mypage/product07.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product07.png",
   },
   {
     id: 3,
     name: "하찮 캐릭터 스티커 세트",
     price: 8000,
-    image: "/shop-community/images/mypage/product03.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product03.png",
   },
 ];
 
@@ -91,14 +91,14 @@ export const cartItems = [
     name: "포포 캐릭터 키링",
     price: 9900,
     quantity: 1,
-    image: "/shop-community/images/mypage/product06.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product06.png",
   },
   {
     id: 2,
     name: "하찮 캐릭터 엽서 세트",
     price: 6000,
     quantity: 2,
-    image: "/shop-community/images/mypage/product07.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/mypage/product07.png",
   },
 ];
 
@@ -109,7 +109,7 @@ export const savedPosts = [
     date: "1시간 전",
     likes: 56,
     comments: 7,
-    image: "/shop-community/images/community/community04.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community04.png",
   },
   {
     id: "community-2",
@@ -117,7 +117,7 @@ export const savedPosts = [
     date: "3시간 전",
     likes: 120,
     comments: 18,
-    image: "/shop-community/images/community/community05.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community05.png",
   },
   {
     id: "community-3",
@@ -125,7 +125,7 @@ export const savedPosts = [
     date: "5시간 전",
     likes: 42,
     comments: 3,
-    image: "/shop-community/images/community/community06.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community06.png",
   },
 ];
 
@@ -136,7 +136,7 @@ export const myPosts = [
     date: "7시간 전",
     likes: 98,
     comments: 12,
-    image: "/shop-community/images/community/community07.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community07.png",
   },
   {
     id: "community-5",
@@ -144,7 +144,7 @@ export const myPosts = [
     date: "1일 전",
     likes: 76,
     comments: 9,
-    image: "/shop-community/images/community/community08.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community08.png",
   },
   {
     id: "community-101",
@@ -152,7 +152,7 @@ export const myPosts = [
     date: "2시간 전",
     likes: 1200,
     comments: 128,
-    image: "/shop-community/images/community/community01.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community01.png",
   },
 ];
 
@@ -163,7 +163,7 @@ export const likedPosts = [
     date: "1시간 전",
     likes: 56,
     comments: 7,
-    image: "/shop-community/images/community/community04.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community04.png",
   },
   {
     id: "community-2",
@@ -171,6 +171,6 @@ export const likedPosts = [
     date: "3시간 전",
     likes: 120,
     comments: 18,
-    image: "/shop-community/images/community/community05.png",
+    image: "https://lsylsh10-commits.github.io/shop-community-server/images/community/community05.png",
   },
 ];
